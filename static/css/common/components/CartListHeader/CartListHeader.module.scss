@@ -1,0 +1,77 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.block {
+  @include textBase;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid $text_primary;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.toggle-button {
+  @include btn-reset;
+}
+
+.price--position-right {
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  color: $icon-primary-color;
+
+  & svg {
+    height: 40px;
+  }
+}
+
+.price {
+  @include textPrimary;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 576px) {
+    font-size: 17px;
+  }
+}
+
+.content {
+  overflow: hidden;
+  max-height: 0;
+  color: $text_secondary;
+  transition: max-height $trans-sides;
+}
+
+.toggle-button {
+  @include square(40px);
+  border-radius: $radius-min;
+
+  &:hover {
+    background: $background_primary_hover;
+  }
+}
+
+.icon {
+  transition: transform $trans-base, background $trans-base;
+
+  &.is-active {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,46 @@
+var _g, _defs;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgYoox(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 55,
+    height: 25,
+    viewBox: "0 0 55 25",
+    fill: "none",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _g || (_g = /*#__PURE__*/React.createElement("g", {
+    clipPath: "url(#clip0_929_42343)"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M0.0820312 0.6875H3.43339L4.98494 5.80319C5.03814 5.95392 5.08247 6.12237 5.13566 6.30856C5.18886 6.49474 5.25092 6.6898 5.32185 6.90258C5.81835 8.42754 6.21732 9.98796 6.5099 11.5661C6.69608 10.3071 6.84681 9.4294 6.97093 8.9329L7.45856 6.83165L7.64475 6.00711L8.94805 0.6875H12.2551L8.15898 14.0841V24.1913H4.98494V14.0841L0.0820312 0.6875Z",
+    fill: "#141824"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M25.5632 13.0208C25.5632 17.1701 25.1022 20.1225 24.1801 21.8691C23.2581 23.6157 21.7065 24.4846 19.5343 24.4846C17.2469 24.4846 15.6422 23.5536 14.7112 21.6829C13.7892 19.8388 13.3281 16.5761 13.3281 11.8859C13.3281 7.70119 13.7892 4.73993 14.7024 3.00219C15.6156 1.26445 17.176 0.395585 19.3925 0.386719C21.3607 0.386719 22.8236 1.06054 23.7812 2.40817C24.4107 3.31251 24.8717 4.59808 25.1554 6.26489C25.4125 7.80758 25.5632 10.0595 25.5632 13.0208ZM22.2385 13.3577C22.2385 9.2882 22.0523 6.58407 21.6888 5.25416C21.3253 3.92426 20.5805 3.25931 19.4457 3.24158C18.3197 3.24158 17.5661 3.85333 17.1937 5.08571C16.8213 6.31809 16.6352 8.80057 16.644 12.5509C16.644 15.9909 16.8391 18.3759 17.2203 19.7058C17.6193 20.9648 18.3552 21.5942 19.4457 21.5942C20.5362 21.5942 21.2632 21.0091 21.6356 19.8299C22.0434 18.6596 22.2385 16.5051 22.2385 13.3577Z",
+    fill: "#141824"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M40.4675 13.0208C40.4675 17.1701 40.0065 20.1225 39.0844 21.8691C38.1624 23.6157 36.6108 24.4846 34.4386 24.4846C32.1512 24.4846 30.5465 23.5536 29.6155 21.6829C28.6935 19.8476 28.2324 16.5849 28.2324 11.8948C28.2324 7.71005 28.6935 4.7488 29.6067 3.01106C30.5199 1.27332 32.0891 0.395585 34.3056 0.386719C36.2739 0.386719 37.7368 1.06054 38.6943 2.40817C39.3238 3.31251 39.7848 4.59808 40.0686 6.26489C40.3257 7.80758 40.4675 10.0595 40.4675 13.0208ZM37.1516 13.3577C37.1516 9.2882 36.9655 6.58407 36.6019 5.25416C36.2384 3.92426 35.4937 3.25931 34.3588 3.24158C33.2329 3.24158 32.4792 3.85333 32.1069 5.08571C31.7345 6.31809 31.5483 8.80057 31.5572 12.5509C31.5572 15.9909 31.7522 18.3759 32.1335 19.7058C32.5324 20.9648 33.2683 21.5942 34.3588 21.5942C35.4494 21.5942 36.1764 21.0091 36.5487 19.8299C36.9477 18.6596 37.1516 16.5051 37.1516 13.3577Z",
+    fill: "#141824"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M41.6996 0.6875H44.7761L46.4074 5.24464C47.0458 7.04444 47.427 8.35661 47.5511 9.19001C47.6664 8.67578 47.7905 8.17042 47.9235 7.68279C48.0565 7.19516 48.2072 6.70753 48.358 6.2199L48.5707 5.53721L50.078 0.696367H53.2786L48.9165 12.2754L53.2786 24.2179H50.078L48.5353 19.7406C48.2161 18.8451 47.9679 18.0472 47.7728 17.3379C47.5955 16.7173 47.4536 16.0789 47.3561 15.4406C47.2763 16.0966 47.1433 16.7527 46.9483 17.3822L46.4163 19.0579L46.1414 19.9445L44.7849 24.2091H41.4336L45.8755 12.2665L41.6996 0.6875Z",
+    fill: "#141824"
+  }))), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
+    id: "clip0_929_42343"
+  }, /*#__PURE__*/React.createElement("rect", {
+    width: 54.4516,
+    height: 24,
+    fill: "white",
+    transform: "translate(0 0.5)"
+  })))));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgYoox);
+export default __webpack_public_path__ + "static/media/yoox.5da950911c6ba4035591764f04d2f1bc.svg";
+export { ForwardRef as ReactComponent };

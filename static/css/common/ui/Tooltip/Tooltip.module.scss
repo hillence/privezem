@@ -1,0 +1,142 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/typography';
+
+%rootStyles {
+  pointer-events: none;
+  position: absolute;
+  padding: 16px;
+  border-radius: $radius-small;
+  background: $background_secondary_hover;
+  /* blur */
+  backdrop-filter: blur(8px);
+  color: $text_secondary_invert;
+  @include textMin;
+  white-space: initial;
+  font-variation-settings: 'wdth' 130;
+}
+
+@mixin tooltipPosition {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-bottom-width: 0;
+  border-top-color: rgba(20, 24, 36, 0.88);
+}
+
+@mixin commonTooltipStyles {
+  @extend %rootStyles;
+  &::before {
+    @include tooltipPosition;
+  }
+}
+
+%positionRight {
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 24px;
+
+  &::before {
+    left: -9px;
+    rotate: 90deg;
+    top: 45%;
+  }
+}
+
+%positionTop {
+  bottom: 8px;
+  left: 30%;
+  transform: translate(-48%, -16px);
+  white-space: normal;
+
+  &::before {
+    bottom: -5.5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+%positionLeft {
+  bottom: 50%;
+  transform: translateY(50%);
+  right: 24px;
+
+  &::before {
+    right: -8px;
+    rotate: -90deg;
+    top: 45%;
+  }
+}
+
+.container {
+  position: relative;
+  @include textCaption;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip {
+  @include commonTooltipStyles;
+  width: 223px;
+
+  .tooltipText {
+    font-size: 14px !important;
+  }
+
+  &--position-right {
+    @extend %positionRight;
+  }
+
+  &--position-right-bottom {
+    bottom: -50%;
+    transform: translateY(50%);
+    left: 24px;
+
+    &::before {
+      left: -9px;
+      rotate: 90deg;
+      top: 22%;
+    }
+  }
+
+  &--position-top {
+    @extend %positionTop;
+  }
+
+  &--position-left {
+    @extend %positionLeft;
+  }
+}
+
+.clipboard {
+  @include commonTooltipStyles;
+  white-space: nowrap;
+  text-align: center;
+  width: fit-content;
+
+  .tooltipText {
+    font-size: 14px !important;
+    color: $text_secondary_invert !important;
+    padding: 0 !important;
+  }
+
+  &--position-right {
+    @extend %positionRight;
+  }
+
+  &--position-top {
+    @extend %positionTop;
+  }
+}
+
+.size-small {
+  @include square(16px);
+}
+.tooltipIcon {
+  @include icn;
+}

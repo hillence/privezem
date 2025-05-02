@@ -1,0 +1,33 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.checkbox {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 4px;
+}
+
+.error-text {
+  @include textCaption;
+  color: $system_error;
+  text-transform: lowercase;
+}
+
+.label {
+  &:before {
+    top: 3px;
+  }
+}
+
+.radio {
+  @include flexMain(flex, row, center, center);
+  gap: 12px;
+  height: 64px;
+
+  &--error {
+    border: 2px solid $system_error;
+    border-radius: 16px;
+    padding: 0 12px;
+  }
+}

@@ -1,0 +1,21 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.logoBox {
+  @include flexMain(flex, row, center, center);
+  gap: 8px;
+
+  .logo {
+    width: 105.749px;
+    height: 24px;
+    flex-shrink: 0;
+
+    @media (max-width: 576px) {
+      width: 80px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+  }
+}

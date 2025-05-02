@@ -1,0 +1,56 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/typography';
+
+.switch {
+  display: none;
+}
+
+.switchLabel {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 24px;
+  padding: 2px;
+  background: $background_secondary;
+  border-radius: 30px;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background: $background_object;
+    border-radius: 30px;
+    transition: 0.3s; //надо норм анимацию
+    cursor: pointer;
+  }
+}
+
+.switch:hover + .switchLabel {
+  background: $background_object_secondary_hover;
+  cursor: pointer;
+}
+
+.switch:checked + .switchLabel {
+  background: $background_success;
+}
+
+.switch:checked + .switchLabel:after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+  background: $background_object;
+}
+
+.switch[disabled] + .switchLabel,
+.switch[disabled] + .switchLabel:after {
+  background: rgba($background_secondary, 0.08);
+  cursor: not-allowed;
+}

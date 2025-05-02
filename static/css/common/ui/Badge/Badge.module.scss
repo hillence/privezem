@@ -1,0 +1,33 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.badge {
+  @include flexMain(flex, column, center, center);
+  padding: 0 4px;
+  min-width: 20px;
+  height: 20px;
+  transition: border-color 0.2s ease-in-out;
+
+  & span {
+    @include textCaption;
+    color: $text_tertiary;
+    text-transform: lowercase;
+    line-height: 0;
+    transition: color 0.2s ease-in-out;
+  }
+
+  &--active {
+    border: 1.5px solid $border_primary_accent;
+    border-radius: 32px;
+
+    & span {
+      @include textCaption;
+      line-height: 0;
+      color: $text_primary;
+      text-transform: lowercase;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}

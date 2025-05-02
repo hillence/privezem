@@ -1,0 +1,28 @@
+var _path;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgPrada(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 80,
+    height: 80,
+    viewBox: "0 0 80 80",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M14.7579 41.531H11.2593V44.0415C11.2593 45.2587 12.4002 45.2587 12.5523 45.2587V45.4109H7.00012V45.2587C7.15224 45.2587 8.29309 45.1826 8.29309 44.0415V36.51C8.29309 35.2928 7.15224 35.2928 7.00012 35.2928V35.1406H14.7579C17.1918 35.1406 18.4087 36.7382 18.4087 38.3358C18.4087 39.9334 17.2678 41.531 14.7579 41.531ZM13.3889 35.8253H11.2593V40.8463H13.3889C14.9861 40.8463 15.7466 39.7052 15.7466 38.3358C15.7466 37.0425 14.9861 35.8253 13.3889 35.8253ZM28.7524 45.4869L23.9608 41.531V44.0415C23.9608 45.2587 25.1017 45.2587 25.2538 45.2587V45.4109H19.7016V45.2587C19.8538 45.2587 20.9946 45.1826 20.9946 44.0415V36.51C20.9946 35.2928 19.8538 35.2928 19.7016 35.2928V35.1406H27.4595C29.8933 35.1406 31.1102 36.7382 31.1102 38.3358C31.1102 39.9334 29.9694 41.531 27.4595 41.531H25.1017C25.6341 42.0635 26.775 42.2918 27.7637 42.2918C28.22 42.2918 28.6764 42.2157 29.0566 42.1396L33.0116 45.3348V45.4869H28.7524ZM26.0904 35.8253H23.8847V40.8463H26.0904C27.6876 40.8463 28.4482 39.7052 28.4482 38.3358C28.4482 37.0425 27.6876 35.8253 26.0904 35.8253ZM41.53 45.4869V45.3348C42.0624 45.3348 42.2906 45.1826 42.2906 44.8023C42.2906 44.6501 42.2145 44.4219 42.1384 44.1936L41.0736 42.4439H36.7384L35.9778 43.9654C35.9017 44.1936 35.8257 44.4219 35.8257 44.6501C35.8257 45.0305 35.9778 45.2587 36.4342 45.2587V45.4109H33.7722V45.2587C34.3807 45.2587 34.837 44.8023 35.2172 44.0415L38.4116 37.6511L37.499 36.2057C37.0426 35.4449 36.5863 35.2928 36.0539 35.2928V35.1406H40.3131L45.4849 44.1936C45.7892 44.7262 46.1695 45.3348 46.854 45.3348V45.4869H41.53ZM38.792 38.4119L37.1187 41.6831H40.6934L38.792 38.4119ZM54.0033 45.4869H47.9188V45.3348C48.0709 45.3348 49.2117 45.2587 49.2117 44.1176V36.5861C49.2117 35.3689 48.0709 35.3689 47.9188 35.3689V35.2167H54.0033C56.7414 35.2167 59.5555 36.9664 59.5555 40.3899C59.6315 43.7372 56.7414 45.4869 54.0033 45.4869ZM56.1329 38.4119C56.1329 36.51 54.916 35.8253 53.623 35.8253H52.1779V44.8023H53.623C54.916 44.8023 56.1329 44.1176 56.1329 42.2157V38.4119ZM67.5415 45.4869V45.3348C68.0738 45.3348 68.302 45.1826 68.302 44.8023C68.302 44.6501 68.2259 44.4219 68.1498 44.1936L67.1612 42.4439H62.8259L62.0654 43.9654C61.9893 44.1936 61.9133 44.4219 61.9133 44.6501C61.9133 45.0305 62.0654 45.2587 62.5217 45.2587V45.4109H59.8597V45.2587C60.4682 45.2587 60.9245 44.8023 61.3048 44.0415L64.4992 37.6511L63.5865 36.2057C63.1302 35.4449 62.6739 35.2928 62.1414 35.2928V35.1406H66.3246L71.4966 44.1936C71.8009 44.7262 72.1806 45.3348 72.8653 45.3348V45.4869H67.5415ZM64.8034 38.4119L63.1302 41.7592H66.7048L64.8034 38.4119Z",
+    fill: "currentColor"
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgPrada);
+export default __webpack_public_path__ + "static/media/prada.13cc463d5a27dc4c2b6abcec4e021c7e.svg";
+export { ForwardRef as ReactComponent };

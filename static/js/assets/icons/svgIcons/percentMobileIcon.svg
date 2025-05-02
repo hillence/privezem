@@ -1,0 +1,46 @@
+var _path, _path2, _circle, _circle2;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgPercentMobileIcon(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 28,
+    height: 29,
+    viewBox: "0 0 28 29",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M11.9948 2.82278C13.3524 2.5834 14.7414 2.5834 16.099 2.82278C17.4566 3.06216 18.7619 3.53724 19.9557 4.22651C21.1496 4.91579 22.2136 5.80864 23.0998 6.86467C23.9859 7.9207 24.6804 9.12363 25.1519 10.419C25.6234 11.7145 25.8646 13.0824 25.8646 14.4609C25.8646 15.8395 25.6234 17.2074 25.1519 18.5028C24.6804 19.7982 23.9859 21.0012 23.0998 22.0572C22.2136 23.1132 21.1496 24.0061 19.9557 24.6954C18.7619 25.3846 17.4566 25.8597 16.099 26.0991C14.7414 26.3385 13.3524 26.3385 11.9948 26.0991C10.6371 25.8597 9.33189 25.3846 8.13803 24.6954C6.94417 24.0061 5.88011 23.1132 4.994 22.0572C4.10788 21.0012 3.41337 19.7982 2.94188 18.5028C2.47038 17.2074 2.22918 15.8395 2.22918 14.4609C2.22918 13.0824 2.47038 11.7145 2.94188 10.419C3.41337 9.12363 4.10788 7.9207 4.994 6.86467C5.88011 5.80864 6.94417 4.91579 8.13803 4.22651C9.33189 3.53724 10.6371 3.06216 11.9948 2.82278Z",
+    fill: "currentColor",
+    fillOpacity: 0.4
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M10.5 18L17.3866 10.7994",
+    stroke: "white",
+    strokeWidth: 1.7,
+    strokeLinecap: "round"
+  })), _circle || (_circle = /*#__PURE__*/React.createElement("circle", {
+    cx: 16.7539,
+    cy: 16.75,
+    r: 1.4,
+    stroke: "white",
+    strokeWidth: 1.7
+  })), _circle2 || (_circle2 = /*#__PURE__*/React.createElement("circle", {
+    cx: 10.75,
+    cy: 12.25,
+    r: 1.4,
+    stroke: "white",
+    strokeWidth: 1.7
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgPercentMobileIcon);
+export default __webpack_public_path__ + "static/media/percentMobileIcon.90f41774cba9a41e5c276838052237b3.svg";
+export { ForwardRef as ReactComponent };

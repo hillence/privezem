@@ -1,0 +1,220 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/typography';
+
+.block {
+  width: 100%;
+}
+.dadataWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.dadataContainer {
+  @include textPrimary;
+  height: 64px;
+
+  @at-root .input--active > div > input {
+    //страшно, но надо
+    padding-top: 20px !important;
+  }
+
+  & input {
+    @include textPrimary;
+    position: relative;
+    border: 1.5px solid $border_disabled;
+    outline: none !important;
+    transition: border $trans-base, box-shadow $trans-base, background-color $trans-base,
+      color $trans-base;
+    background: transparent;
+    width: 100%;
+    letter-spacing: unset;
+    border-radius: $radius-input-base;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: $controll-base;
+    background: $background_primary;
+
+    &:hover,
+    &:focus {
+      box-shadow: $shadow-block;
+      border-color: $border_primary_accent;
+      border-width: 1.5px;
+    }
+
+    &::placeholder {
+      @include textPrimary;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      text-transform: lowercase;
+      padding-left: 12px;
+      padding-right: 12px;
+      transform: translate(0, -50%);
+      pointer-events: none;
+      transition: top $trans-base, transform $trans-base, font-size $trans-base;
+      color: $text_secondary_disabled;
+    }
+
+    &:valid {
+      padding-top: 20px;
+    }
+
+    &:focus {
+      padding-top: 20px;
+
+      &::placeholder {
+        @include textCaption;
+        transform: translate(0, 0);
+        top: 8px;
+        visibility: visible !important;
+        display: flex !important;
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  .input--has-error,
+  .input--has-error:hover,
+  .input--has-error:focus {
+    border-color: $system_error !important;
+    border-width: 2px !important;
+  }
+}
+
+.dadataSuggestions {
+  color: $text-secondary;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  //margin: 0;
+
+  background: $background_primary;
+  border-radius: $radius-input-base;
+  box-shadow: $shadow-drops;
+  list-style: none;
+  overflow: scroll;
+
+  scrollbar-width: none;
+
+  text-align: left;
+  z-index: 10;
+  height: 300px;
+
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.dadataSuggestion {
+  border: none;
+  outline: none;
+  background-color: $background_primary;
+  min-height: 56px;
+  padding: 8px 12px 8px 16px;
+  width: 100%;
+  text-align: left;
+
+  &:hover {
+    color: $text_primary;
+
+    .dadataHighlight {
+      color: $text_primary;
+    }
+  }
+}
+
+.dadataHighlight {
+  color: $text-secondary;
+}
+
+.label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  pointer-events: none;
+  transition: top $trans-base, transform $trans-base, font-size $trans-base;
+  z-index: 10;
+
+  &--active {
+    @include textCaption;
+    transform: translate(0, 0);
+  }
+
+  &--size-small {
+    @include textBase;
+    position: relative;
+    width: auto;
+    top: 0;
+    transform: translate(0, 0);
+    margin-right: 8px;
+  }
+
+  &--size-base {
+    @include textPrimary;
+    text-transform: lowercase;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: block;
+    //text-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &--size-large {
+    @include textPrimary;
+    text-transform: lowercase;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &--variant-default {
+    color: $text_secondary_disabled;
+  }
+
+  &--active {
+    @include textCaption;
+    transform: translate(0, 0);
+
+    @media (max-width: 576px) {
+      @include textSmall;
+    }
+  }
+
+  @at-root &--active#{&}--size-small {
+    @include textBase;
+    top: 0;
+  }
+
+  @at-root &--active#{&}--size-base {
+    top: 8px;
+  }
+
+  @at-root &--active#{&}--size-large {
+    top: 8px;
+  }
+}
+
+.error {
+  color: $system_error;
+  margin-top: 4px;
+  display: none;
+
+  .block--has-error & {
+    @include textCaption;
+    display: block;
+  }
+}

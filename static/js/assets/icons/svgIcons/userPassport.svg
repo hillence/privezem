@@ -1,0 +1,33 @@
+var _path, _path2;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgUserPassport(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 20,
+    height: 23,
+    viewBox: "0 0 20 23",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M12.6257 0.416666C12.6257 0.255583 12.4951 0.125 12.334 0.125H4.16732C2.3954 0.125 0.958984 1.56142 0.958984 3.33333V19.6667C0.958984 21.4386 2.3954 22.875 4.16732 22.875H15.834C17.6059 22.875 19.0423 21.4386 19.0423 19.6667V8.17157C19.0423 8.01049 18.9117 7.8799 18.7507 7.8799H13.5007C13.0174 7.8799 12.6257 7.48815 12.6257 7.0049V0.416666ZM10.0007 9.16667C8.71199 9.16667 7.66732 10.2113 7.66732 11.5C7.66732 12.7887 8.71199 13.8333 10.0007 13.8333C11.2893 13.8333 12.334 12.7887 12.334 11.5C12.334 10.2113 11.2893 9.16667 10.0007 9.16667ZM5.33398 19.0833C5.33398 17.1503 6.90099 15.5833 8.83398 15.5833H11.1673C13.1003 15.5833 14.6673 17.1503 14.6673 19.0833C14.6673 19.7277 14.145 20.25 13.5007 20.25H6.50065C5.85632 20.25 5.33398 19.7277 5.33398 19.0833Z",
+    fill: "currentColor"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M14.3757 0.794825C14.3757 0.57958 14.6004 0.442911 14.7679 0.578117C14.9089 0.691999 15.0357 0.825417 15.1439 0.976141L18.6593 5.87369C18.7393 5.98519 18.6526 6.1299 18.5154 6.1299H14.6673C14.5062 6.1299 14.3757 5.99932 14.3757 5.83824V0.794825Z",
+    fill: "currentColor"
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgUserPassport);
+export default __webpack_public_path__ + "static/media/userPassport.eeff679ade947d4f48c70059849662d5.svg";
+export { ForwardRef as ReactComponent };

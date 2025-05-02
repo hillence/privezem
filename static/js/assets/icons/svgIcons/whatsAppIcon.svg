@@ -1,0 +1,63 @@
+var _path, _path2, _path3, _path4, _defs;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgWhatsAppIcon(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M7.52307 18.8247L7.82541 19.0031C9.09583 19.7536 10.5524 20.1506 12.0377 20.1514H12.0409C16.6025 20.1514 20.315 16.4565 20.3168 11.9154C20.3175 9.71461 19.4575 7.64545 17.895 6.0886C16.3324 4.53204 14.2548 3.67422 12.0439 3.67331C7.47886 3.67331 3.7663 7.36757 3.76458 11.9087C3.76398 13.4648 4.20127 14.9804 5.02983 16.2915L5.22677 16.6032L4.39052 19.6423L7.52307 18.8247ZM2 21.9964L3.41258 16.8619C2.54129 15.3592 2.08292 13.6545 2.08364 11.9082C2.08576 6.44482 6.5522 2 12.0411 2C14.7046 2.00114 17.2046 3.03302 19.0845 4.90598C20.9643 6.77891 21.9992 9.26852 21.9983 11.9162C21.996 17.3793 17.5286 21.825 12.0411 21.825C12.0407 21.825 12.0413 21.825 12.0411 21.825H12.0369C10.3704 21.8244 8.73301 21.4083 7.2787 20.6187L2 21.9964Z",
+    fill: "white"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M2.42727 11.9071C2.42667 13.5928 2.86914 15.2385 3.71047 16.6894L2.34668 21.6462L7.44238 20.3161C8.84635 21.0777 10.4271 21.4798 12.0358 21.4803H12.0399C17.3377 21.4803 21.6499 17.1889 21.6521 11.9146C21.6532 9.35863 20.6542 6.95553 18.8392 5.14726C17.0246 3.33925 14.6112 2.343 12.0395 2.3418C6.74147 2.3418 2.42957 6.63259 2.42727 11.9071ZM12.0399 21.4803C12.0397 21.4803 12.0398 21.4803 12.0399 21.4803V21.4803Z",
+    fill: "url(#paint0_linear_1203_52121)"
+  })), _path3 || (_path3 = /*#__PURE__*/React.createElement("path", {
+    d: "M2.08364 11.9124C2.08303 13.6587 2.5414 15.3635 3.4127 16.8661L2 22.0004L7.27853 20.6226C8.73293 21.4121 10.3703 21.8282 12.0367 21.8289H12.0409C17.5284 21.8289 21.9958 17.3832 21.9981 11.9201C21.9991 9.27228 20.9641 6.78273 19.0843 4.90989C17.2043 3.03704 14.7045 2.00505 12.0409 2.00391C6.55232 2.00391 2.08577 6.44873 2.08347 11.9121M5.22688 16.6072L5.02984 16.2957C4.20128 14.9844 3.76398 13.4689 3.76458 11.9129C3.76639 7.37204 7.47887 3.6775 12.0439 3.6775C14.2545 3.67835 16.3322 4.53626 17.895 6.09279C19.4576 7.64944 20.3175 9.71876 20.3169 11.9193C20.3149 16.4604 16.6023 20.1553 12.0407 20.1553H12.0375C10.5522 20.1544 9.09558 19.7575 7.82524 19.0071L7.5229 18.8287L4.3904 19.6463L5.22688 16.6072ZM12.0409 21.8289C12.0407 21.8289 12.0408 21.8289 12.0409 21.8289V21.8289Z",
+    fill: "url(#paint1_linear_1203_52121)"
+  })), _path4 || (_path4 = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M9.55234 7.76574C9.36594 7.35329 9.16981 7.34504 8.99252 7.33778C8.84742 7.33164 8.68148 7.33204 8.51572 7.33204C8.34977 7.33204 8.08023 7.39402 7.85231 7.64186C7.62419 7.88971 6.98145 8.48883 6.98145 9.7073C6.98145 10.9259 7.87309 12.1033 7.99731 12.2687C8.12175 12.4338 9.71853 15.0143 12.2472 16.007C14.3489 16.832 14.7766 16.6679 15.2327 16.6266C15.6889 16.5853 16.7047 16.0277 16.912 15.4493C17.1194 14.8711 17.1194 14.3754 17.0572 14.2719C16.995 14.1687 16.8291 14.1067 16.5803 13.9829C16.3314 13.859 15.1083 13.2598 14.8803 13.1772C14.6521 13.0946 14.4863 13.0534 14.3203 13.3013C14.1545 13.549 13.678 14.1067 13.5328 14.2719C13.3877 14.4374 13.2425 14.458 12.9937 14.3342C12.7448 14.2099 11.9435 13.9486 10.9929 13.105C10.2533 12.4485 9.75399 11.6379 9.60879 11.3899C9.4637 11.1423 9.5933 11.0081 9.71805 10.8846C9.82983 10.7736 9.96693 10.5954 10.0914 10.4509C10.2155 10.3063 10.2569 10.2031 10.3398 10.0379C10.4229 9.87255 10.3814 9.72791 10.3192 9.60403C10.2569 9.48015 9.77358 8.25548 9.55234 7.76574Z",
+    fill: "white"
+  })), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+    id: "paint0_linear_1203_52121",
+    x1: 11.9995,
+    y1: 21.6442,
+    x2: 11.9995,
+    y2: 2.33977,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#20B038"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#60D66A"
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "paint1_linear_1203_52121",
+    x1: 11.9992,
+    y1: 22.0009,
+    x2: 11.9992,
+    y2: 2.00451,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#F9F9F9"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "white"
+  })))));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgWhatsAppIcon);
+export default __webpack_public_path__ + "static/media/whatsAppIcon.9507e25ec049080ef0932414554ced4a.svg";
+export { ForwardRef as ReactComponent };

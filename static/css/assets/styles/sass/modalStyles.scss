@@ -1,0 +1,46 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/typography';
+
+%modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all $trans-base;
+  visibility: hidden;
+  z-index: $z-overlay;
+
+  &--active {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+%closeBox {
+  position: absolute;
+  visibility: hidden;
+  //left: -100px;
+  //display: none;
+}
+
+%closeBox--active {
+  position: absolute;
+  right: 16px;
+  top: 20px;
+  width: 32px;
+  height: 32px;
+  z-index: $z-toast;
+  visibility: visible;
+  transition: visibility 0.3s ease-in-out;
+
+  @media (max-width: 500px) {
+    right: 16px;
+    top: 20px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

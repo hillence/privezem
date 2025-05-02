@@ -1,0 +1,30 @@
+var _path;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgTooltipIcon(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 20,
+    height: 20,
+    viewBox: "0 0 20 20",
+    fill: "none",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M18.175 10V9.99995C18.1727 7.83252 17.3107 5.75452 15.7781 4.22191C14.2455 2.68931 12.1675 1.82729 10.0001 1.825H10C8.38314 1.825 6.80259 2.30446 5.45822 3.20274C4.11385 4.10102 3.06603 5.37778 2.44729 6.87156C1.82854 8.36535 1.66665 10.0091 1.98208 11.5949C2.29752 13.1807 3.07611 14.6373 4.21941 15.7806C5.3627 16.9239 6.81935 17.7025 8.40514 18.0179C9.99094 18.3334 11.6347 18.1715 13.1284 17.5527C14.6222 16.934 15.899 15.8862 16.7973 14.5418C17.6955 13.1974 18.175 11.6169 18.175 10ZM10.8211 14.6111C10.9296 14.4487 10.9875 14.2578 10.9875 14.0625C10.9875 13.8006 10.8835 13.5494 10.6983 13.3642C10.5131 13.179 10.2619 13.075 10 13.075C9.80469 13.075 9.61377 13.1329 9.45138 13.2414C9.28898 13.3499 9.16241 13.5042 9.08767 13.6846C9.01293 13.865 8.99337 14.0636 9.03148 14.2552C9.06958 14.4467 9.16363 14.6227 9.30174 14.7608C9.43984 14.8989 9.6158 14.9929 9.80735 15.031C9.99891 15.0691 10.1975 15.0496 10.3779 14.9748C10.5583 14.9001 10.7126 14.7735 10.8211 14.6111ZM10 5.575C8.25403 5.575 6.825 6.85428 6.825 8.4375V8.75C6.825 8.92902 6.89612 9.10071 7.02271 9.2273C7.14929 9.35388 7.32098 9.425 7.5 9.425C7.67902 9.425 7.85071 9.35388 7.9773 9.2273C8.10389 9.10071 8.175 8.92902 8.175 8.75V8.4375C8.175 7.61385 8.98514 6.925 10 6.925C11.0149 6.925 11.825 7.61385 11.825 8.4375C11.825 9.26115 11.0149 9.95 10 9.95C9.82098 9.95 9.64929 10.0211 9.52271 10.1477C9.39612 10.2743 9.325 10.446 9.325 10.625V11.25C9.325 11.429 9.39612 11.6007 9.52271 11.7273C9.64929 11.8539 9.82098 11.925 10 11.925C10.179 11.925 10.3507 11.8539 10.4773 11.7273C10.6039 11.6007 10.675 11.429 10.675 11.25V11.2351C12.0992 10.9557 13.175 9.81038 13.175 8.4375C13.175 6.85428 11.746 5.575 10 5.575ZM15.6748 6.20823C16.4247 7.33058 16.825 8.65011 16.825 9.99994C16.823 11.8094 16.1032 13.5442 14.8237 14.8237C13.5442 16.1032 11.8094 16.8229 9.99995 16.825C8.65011 16.825 7.33059 16.4247 6.20824 15.6748C5.08587 14.9248 4.21109 13.8589 3.69453 12.6118C3.17796 11.3647 3.0428 9.99243 3.30614 8.66851C3.56949 7.34459 4.21951 6.12849 5.174 5.174C6.12849 4.2195 7.34459 3.56948 8.66851 3.30614C9.99243 3.0428 11.3647 3.17795 12.6118 3.69452C13.8589 4.21109 14.9248 5.08587 15.6748 6.20823Z",
+    fill: "currentColor",
+    stroke: "#141824",
+    strokeWidth: 0.1
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgTooltipIcon);
+export default __webpack_public_path__ + "static/media/tooltipIcon.b24e79a40f868e100c4a875d36a10406.svg";
+export { ForwardRef as ReactComponent };

@@ -1,0 +1,148 @@
+@import 'src/assets/styles/sass/variables';
+
+@import 'src/assets/styles/sass/mixins';
+
+// https://developers.google.com/fonts/docs/css2?hl=ru
+
+// Titles
+@mixin superTitle {
+  @include font-size(64px, 70px);
+
+  font-weight: 600;
+  letter-spacing: -0.005em;
+
+  @media (max-width: 576px) {
+    @include font-size(30px, 33px);
+  }
+}
+
+@mixin mainTitle {
+  @include font-size(56px, 62px);
+
+  font-variation-settings: 'wght' 620, 'wdth' 130;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+@mixin pageTitle {
+  @include font-size(40px);
+
+  font-variation-settings: 'wght' 620, 'wdth' 130;
+  font-weight: 620;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 576px) {
+    @include font-size(26px, 26px);
+  }
+}
+
+@mixin blockTitle {
+  @include font-size(24px, 26px);
+
+  font-variation-settings: 'wght' 640, 'wdth' 130;
+  font-weight: 640;
+  letter-spacing: 0.01em;
+
+  @media (max-width: 576px) {
+    @include font-size(20px, 22px);
+  }
+}
+
+@mixin subTitle {
+  @include font-size(20px, 23px);
+
+  font-variation-settings: 'wght' 620, 'wdth' 130;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 576px) {
+    @include font-size(18px, 20.7px);
+  }
+}
+
+// Text
+@mixin textPrimary {
+  @include font-size(20px, 28px);
+
+  font-variation-settings: 'wght' 500, 'wdth' 120;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+@mixin textBase {
+  @include font-size(16px, 21px);
+
+  font-variation-settings: 'wdth' 120;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+@mixin textBaseAccent {
+  @include font-size(16px, 19px);
+
+  font-variation-settings: 'wght' 620, 'wdth' 130;
+  font-weight: 620;
+  letter-spacing: -0.02em;
+}
+
+@mixin textSecondary {
+  @include font-size(16px, 19px);
+
+  font-weight: 500;
+}
+
+@mixin textCaption {
+  @include font-size(14px, 18px);
+  font-weight: 500;
+}
+
+@mixin textSmall {
+  @include font-size(13px, 16.25px);
+  font-weight: 500;
+}
+
+@mixin textMin {
+  @include font-size(12px, 15.6px);
+
+  font-weight: 500;
+}
+
+// another
+
+@mixin burgerText {
+  @include font-size(30px, 33px);
+
+  font-weight: 620;
+}
+
+@mixin textFs-22 {
+  @include font-size(22px, 24.2px);
+
+  font-weight: 620;
+}
+
+@mixin textFs-18 {
+  @include font-size(18px, 20.7px);
+
+  font-weight: 620;
+}
+
+@mixin textFs-20-to17 {
+  @include font-size(20px, 28px);
+
+  font-weight: 500;
+
+  @media (max-width: 576px) {
+    @include font-size(17px, 28px);
+  }
+}
+
+@mixin textFs-20-to-18 {
+  @include font-size(20px, 23px);
+
+  font-weight: 620;
+
+  @media (max-width: 576px) {
+    @include font-size(18px, 20.7px);
+  }
+}

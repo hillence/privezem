@@ -1,0 +1,46 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/typography';
+
+.block {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+
+  input[type='radio'] {
+    display: none;
+
+    &:checked + .label:before {
+      border: 7px solid $border_primary_accent;
+      transition: border-width $trans-base;
+    }
+
+    &:disabled + .label:before {
+      color: $text_disabled;
+      border: 7px solid $text_disabled;
+    }
+
+    &:disabled + .label {
+      color: $text_disabled;
+    }
+  }
+
+  .label {
+    @include textFs-20-to17;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0 0 0 (24px + 12px);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include square(24px);
+      border: 2px solid $border_primary;
+      border-radius: 50%;
+    }
+  }
+}

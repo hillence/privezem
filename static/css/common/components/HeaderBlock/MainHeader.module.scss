@@ -1,0 +1,123 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.block {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: $z-header;
+  transition: background-color $trans-base, box-shadow $trans-base, border $trans-base;
+  background: transparent;
+
+  &--fixed {
+    background: $text_primary_invert;
+    box-shadow: $shadow-drops;
+  }
+}
+
+.wrapper {
+  @include flexMain(flex, row, space-between, center);
+  height: 98px;
+  width: 100%;
+
+  @media (max-width: 769px) {
+    height: 72px;
+  }
+
+  @media (max-width: 376px) {
+    height: 64px;
+  }
+
+  &.is-locked {
+    // width: calc(100% + 16px);
+  }
+
+  .burgerBox {
+    @media (min-width: $media-tablet-user-account + 1px) {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  outline: none !important;
+  color: $text_variant;
+  transition: opacity $trans-base, color $trans-base;
+
+  .block--inverted & {
+    color: $text_primary_invert;
+  }
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+
+.logoImg {
+  width: 105.749px;
+  height: 24px;
+  flex-shrink: 0;
+
+  @media (max-width: 576px) {
+    width: 80px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+}
+
+.side {
+  @media (max-width: $media-tablet-user-account) {
+    display: none;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  @include textBase;
+}
+
+.menuEl {
+  color: $text_variant;
+  position: relative;
+
+  .block--inverted & {
+    color: $text_primary_invert;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -0.2em;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: width $trans-base;
+    background: currentColor;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.menuEnter {
+}
+
+a:focus {
+  outline: none;
+}

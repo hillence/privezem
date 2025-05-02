@@ -1,0 +1,34 @@
+var _path, _path2, _path3;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgCedro(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 16,
+    height: 15,
+    viewBox: "0 0 16 15",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M7.20415 0H7.92572C7.96982 0 8.01211 0.018055 8.04329 0.050193C8.07447 0.0823311 8.09199 0.12592 8.09199 0.17137V14.683C8.09199 14.7284 8.07447 14.772 8.04329 14.8041C8.01211 14.8363 7.96982 14.8543 7.92572 14.8543H7.20415C6.2578 14.8543 5.32073 14.6622 4.44647 14.2888C3.57221 13.9154 2.77788 13.3681 2.10887 12.6783C1.43986 11.9884 0.909276 11.1694 0.547429 10.2681C0.185582 9.36681 -0.000436039 8.40086 7.67494e-07 7.42545C7.67494e-07 5.4561 0.759007 3.56741 2.11005 2.17486C3.46109 0.782322 5.29349 0 7.20415 0V0Z",
+    fill: "currentColor"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M15.8036 0.00195312H10.0758C9.98218 0.00195312 9.90625 0.0802127 9.90625 0.176751V6.32894C9.90625 6.42548 9.98218 6.50374 10.0758 6.50374H15.8036C15.8972 6.50374 15.9732 6.42548 15.9732 6.32894V0.176751C15.9732 0.0802127 15.8972 0.00195312 15.8036 0.00195312Z",
+    fill: "currentColor"
+  })), _path3 || (_path3 = /*#__PURE__*/React.createElement("path", {
+    d: "M15.8036 8.29688H10.0758C9.98218 8.29688 9.90625 8.37513 9.90625 8.47167V14.6735C9.90625 14.7701 9.98218 14.8483 10.0758 14.8483H15.8036C15.8972 14.8483 15.9732 14.7701 15.9732 14.6735V8.47167C15.9732 8.37513 15.8972 8.29688 15.8036 8.29688Z",
+    fill: "currentColor"
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgCedro);
+export default __webpack_public_path__ + "static/media/cedro.95ba49ee15e44a2ef4982c152cb8778c.svg";
+export { ForwardRef as ReactComponent };

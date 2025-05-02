@@ -1,0 +1,21 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+%item {
+  @include flexMain(flex, row, space-between, center);
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 8px;
+
+  & svg {
+    @include square(20px);
+    @include icn;
+  }
+
+  &:hover {
+    background: $background_primary_hover;
+    cursor: pointer;
+  }
+}

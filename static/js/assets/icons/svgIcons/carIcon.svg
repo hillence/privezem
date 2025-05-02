@@ -1,0 +1,31 @@
+var _path;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgCarIcon(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 29,
+    height: 28,
+    viewBox: "0 0 29 28",
+    fill: "none",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M4 8.16927C4 7.43289 4.59695 6.83594 5.33333 6.83594H14.6667C15.403 6.83594 16 7.43289 16 8.16927V8.33594V9.33594V20.0026H11.2869C10.7678 19.1973 9.86301 18.6641 8.83366 18.6641C7.8043 18.6641 6.89949 19.1973 6.38039 20.0026H5.33333C4.59695 20.0026 4 19.4057 4 18.6693V8.16927ZM16 22.0026H11.72C11.5156 23.4135 10.3012 24.4974 8.83366 24.4974C7.3661 24.4974 6.1517 23.4135 5.94728 22.0026H5.33333C3.49238 22.0026 2 20.5102 2 18.6693V8.16927C2 6.32832 3.49238 4.83594 5.33333 4.83594H14.6667C16.5076 4.83594 18 6.32832 18 8.16927V8.33594H20.048C20.8789 8.33594 21.6798 8.64626 22.2938 9.20609L26.2458 12.8094C26.9386 13.441 27.3333 14.3351 27.3333 15.2726V18.6693C27.3333 20.5102 25.841 22.0026 24 22.0026H23.387C23.1826 23.4135 21.9682 24.4974 20.5007 24.4974C19.0331 24.4974 17.8187 23.4135 17.6143 22.0026H17H16ZM18.0474 20.0026C18.5665 19.1973 19.4713 18.6641 20.5007 18.6641C21.53 18.6641 22.4348 19.1973 22.9539 20.0026H24C24.7364 20.0026 25.3333 19.4057 25.3333 18.6693V15.2726C25.3333 14.8976 25.1754 14.54 24.8983 14.2873L20.9463 10.684C20.7007 10.4601 20.3803 10.3359 20.048 10.3359H18V20.0026H18.0474ZM8.83366 22.4974C9.33992 22.4974 9.75033 22.087 9.75033 21.5807C9.75033 21.0745 9.33992 20.6641 8.83366 20.6641C8.3274 20.6641 7.91699 21.0745 7.91699 21.5807C7.91699 22.087 8.3274 22.4974 8.83366 22.4974ZM21.4173 21.5807C21.4173 22.087 21.0069 22.4974 20.5007 22.4974C19.9944 22.4974 19.584 22.087 19.584 21.5807C19.584 21.0745 19.9944 20.6641 20.5007 20.6641C21.0069 20.6641 21.4173 21.0745 21.4173 21.5807Z",
+    fill: "#141824",
+    fillOpacity: 0.4
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgCarIcon);
+export default __webpack_public_path__ + "static/media/carIcon.51b97ca6e02e6367f24603b49297bb29.svg";
+export { ForwardRef as ReactComponent };

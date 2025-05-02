@@ -1,0 +1,28 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/typography';
+
+.block {
+  position: relative;
+}
+
+.goods {
+  width: 100%;
+  position: absolute;
+  top: calc(100% + 15px);
+  margin-top: 0;
+
+  @media (max-width: 576px) {
+    top: unset;
+  }
+}
+
+.skeleton-anim {
+  animation: skeleton .8s ease-in-out infinite alternate;
+}
+
+@keyframes ant-skeleton-loading {
+  to {
+    opacity: 0.6;
+  }
+}

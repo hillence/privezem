@@ -1,0 +1,130 @@
+@import 'src/assets/styles/sass/variables';
+
+@mixin text($fontFamily, $fontSize, $fontWeight, $lineHeight, $letterSpacing, $fontStyle) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  font-style: $fontStyle;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+}
+
+@mixin flexMain($display, $flexDirection, $justifyContent, $alignItems) {
+  display: $display;
+  flex-direction: $flexDirection;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+
+@mixin font-size($size, $lineHeight: $size) {
+  font-size: $size;
+
+  @if $lineHeight == 0 {
+    line-height: 1;
+  } @else {
+    line-height: $lineHeight / $size;
+  }
+}
+
+@mixin icn {
+  user-select: none;
+
+  display: inline-block;
+  flex: 0 0 auto;
+
+  fill: currentColor;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin absolute-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+@mixin btn-reset() {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+// MEDIA
+// Универсальный миксин для медиа-запросов
+@mixin media($media) {
+  @if $media == fullhd {
+    @media only screen and (max-width: calc($media-fullhd - 1px)) {
+      @content;
+    }
+  }
+
+  @if $media == fullhd-eq {
+    @media only screen and (max-width: $media-fullhd) {
+      @content;
+    }
+  } @else if $media == fullhd-min {
+    @media only screen and (min-width: calc($media-fullhd + 1px)) {
+      @content;
+    }
+  } @else if $media == hd {
+    @media only screen and (max-width: calc($media-hd - 1px)) {
+      @content;
+    }
+  } @else if $media == hd-min {
+    @media only screen and (min-width: calc($media-hd + 1px)) {
+      @content;
+    }
+  } @else if $media == desktop {
+    @media only screen and (max-width: calc($media-desktop - 1px)) {
+      @content;
+    }
+  } @else if $media == desktop-min {
+    @media only screen and (min-width: calc($media-desktop + 1px)) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media only screen and (max-width: calc($media-tablet - 1px)) {
+      @content;
+    }
+  } @else if $media == tablet-min {
+    @media only screen and (min-width: calc($media-tablet + 1px)) {
+      @content;
+    }
+  } @else if $media == phone {
+    @media only screen and (max-width: calc($media-phone - 1px)) {
+      @content;
+    }
+  } @else if $media == phoneSE {
+    @media only screen and (max-width: calc($media-phoneSE - 1px)) {
+      @content;
+    }
+  } @else if $media == phone-min {
+    @media only screen and (min-width: calc($media-phone + 1px)) {
+      @content;
+    }
+  } @else if $media == end {
+    @media only screen and (max-width: calc($media-end - 1px)) {
+      @content;
+    }
+  } @else if $media == retina {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      @content;
+    }
+  } @else if $media == hover {
+    @media (hover: hover), screen and (min-width: 0\0) {
+      @content;
+    }
+  } @else if $media == animation {
+    @media (prefers-reduced-motion: no-preference) {
+      @content;
+    }
+  }
+}

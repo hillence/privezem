@@ -1,0 +1,43 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+
+.footerGap {
+  height: 0; // нужная штука, чтобы создать паддинг между футером и блоком оформить в корзине на мобилках
+  display: flex;
+
+  &--active {
+    @media (max-width: 576px) {
+      height: 72px;
+    }
+  }
+}
+
+.footerGapMyCart,
+.footerGapOrdering {
+  height: 0;
+
+  &--active {
+    @media (max-width: $media-tablet-user-account) {
+      height: 84px;
+    }
+    @media (max-width: 576px) {
+      //height: 72px;
+    }
+  }
+}
+
+.footerGapUserAccount {
+  height: 0;
+  display: flex;
+
+  @media (max-width: $media-tablet-user-account) {
+    height: 88px;
+  }
+
+  @media (max-width: 376px) {
+    height: 72px;
+  }
+}

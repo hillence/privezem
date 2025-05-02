@@ -1,0 +1,95 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  @include textBase;
+  background: $background_secondary_hover;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: $z-onboarding;
+  border-radius: $radius-blocks;
+  box-shadow: $shadow-drops;
+  transition: transform $trans-base, opacity $trans-fast, visibility $trans-fast;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom-width: 0;
+    border-top-color: rgba(20, 24, 36, 0.88);
+    top: -6px;
+    left: 50%;
+    rotate: 180deg;
+  }
+
+  &--shown {
+    pointer-events: all;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .close {
+    @include btn-reset;
+    @include square(24px);
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $text_primary_invert;
+    background: rgba($background_primary, 0.14);
+    border-radius: 50%;
+    transition: color $trans-base, background $trans-base;
+
+    &:hover {
+      color: $background_secondary_active;
+      background: $background_primary;
+    }
+
+    .closeIcn {
+      @include square(24px);
+      @include icn;
+    }
+  }
+
+  .body {
+    padding: 16px;
+    color: $text_primary_invert;
+
+    .title {
+      @include textBaseAccent;
+      cursor: default;
+      margin-bottom: 8px;
+    }
+
+    .text {
+      @include textCaption;
+      cursor: default;
+      margin-bottom: 12px;
+      color: $text_white_transparent;
+
+      //@media (max-width: 576px) {
+      //  font-size: 13px;
+      //}
+
+      & span {
+        color: $text_primary_invert;
+        text-decoration-line: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}

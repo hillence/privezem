@@ -1,0 +1,28 @@
+@import 'src/assets/styles/sass/variables';
+
+@import 'src/assets/styles/sass/mixins';
+
+.fluid,
+.base {
+  //@include flexMain(flex, row, center, center);
+  width: 100%;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 32px;
+  padding-left: 32px;
+  position: relative;
+
+  @media (max-width: 576px) {
+    padding: 0 20px;
+  }
+  //@media (max-width: 376px) {
+  //  height: 64px;
+  //}
+}
+
+.footer {
+  @media (max-width: 576px) {
+    padding: 0 8px;
+  }
+}

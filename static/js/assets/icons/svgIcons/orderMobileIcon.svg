@@ -1,0 +1,37 @@
+var _path, _path2;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgOrderMobileIcon(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 28,
+    height: 28,
+    viewBox: "0 0 28 28",
+    fill: "none",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M9.625 5.83333C9.625 4.06142 11.0614 2.625 12.8333 2.625H15.1667C16.9386 2.625 18.375 4.06142 18.375 5.83333V8.16667C18.375 8.64992 17.9832 9.04167 17.5 9.04167H10.5C10.0168 9.04167 9.625 8.64992 9.625 8.16667V5.83333ZM12.8333 4.375C12.0279 4.375 11.375 5.02792 11.375 5.83333V7.29167H16.625V5.83333C16.625 5.02792 15.9721 4.375 15.1667 4.375H12.8333Z",
+    fill: "currentColor",
+    fillOpacity: 0.4
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M7.56808 5.75023C7.71558 5.67952 7.87933 5.79206 7.87903 5.95563L7.875 8.16667C7.875 9.61642 9.05025 10.7917 10.5 10.7917H17.5C18.9497 10.7917 20.125 9.61642 20.125 8.16667V5.95497C20.125 5.79159 20.2886 5.67934 20.436 5.74997C21.8186 6.41281 22.75 7.82458 22.75 9.43303V21.6707C22.75 23.6666 21.2633 25.3499 19.2827 25.5966C15.7745 26.0335 12.2255 26.0335 8.7173 25.5966C6.7367 25.3499 5.25 23.6666 5.25 21.6707V9.43303C5.25 7.82479 6.18521 6.41318 7.56808 5.75023ZM17.5 14C17.9832 14 18.375 14.3918 18.375 14.875C18.375 15.3582 17.9832 15.75 17.5 15.75H10.5C10.0168 15.75 9.625 15.3582 9.625 14.875C9.625 14.3918 10.0168 14 10.5 14H17.5ZM16.3333 17.5C16.8166 17.5 17.2083 17.8918 17.2083 18.375C17.2083 18.8582 16.8166 19.25 16.3333 19.25H10.5C10.0168 19.25 9.625 18.8582 9.625 18.375C9.625 17.8918 10.0168 17.5 10.5 17.5H16.3333Z",
+    fill: "currentColor",
+    fillOpacity: 0.4
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgOrderMobileIcon);
+export default __webpack_public_path__ + "static/media/orderMobileIcon.ca6e6c2dbefdd6e64446d961a75036df.svg";
+export { ForwardRef as ReactComponent };

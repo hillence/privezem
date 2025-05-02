@@ -1,0 +1,120 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  background-color: $background_object;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include flexMain(flex, column, center, center);
+}
+
+.containerDisappear {
+  animation: containerDisappear 1s forwards 4s;
+}
+
+.contentBox {
+  @include flexMain(flex, column, center, center);
+  gap: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: 10000;
+
+  .logo {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .appear {
+    animation: appearAnimation 1s forwards;
+  }
+
+  .progressBar {
+    display: flex;
+    width: 143px;
+    height: 6px;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background: $background-secondary;
+
+    .progress {
+      width: 0;
+      height: 100%;
+      border-radius: 32px;
+      background: $icon-primary-color;
+      transition: width 1s ease-in-out;
+    }
+
+    .progressAnimation {
+      animation: progressBarAnimation 1s forwards 2s;
+    }
+  }
+
+  .progressBarAppear {
+    animation: progressBarAppear 1s forwards 1s;
+  }
+}
+
+.contentBoxDisappear {
+  animation: contentBoxDisappear 0.5s forwards 4s;
+}
+
+
+@keyframes appearAnimation {
+  from {
+    transform: translateY(-24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes progressBarAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes progressBarAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes containerDisappear {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes contentBoxDisappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

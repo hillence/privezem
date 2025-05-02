@@ -1,0 +1,92 @@
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+
+%rootBlock {
+  @include flexMain(flex, column, flex-start, flex-start);
+  max-width: 678px;
+  width: 100%;
+  height: auto;
+  gap: 24px;
+
+  @media (max-width: $media-tablet-user-account) {
+    max-width: 100%;
+  }
+}
+
+%contentBox {
+  @include flexMain(flex, column, flex-start, flex-start);
+  width: 100%;
+  gap: 16px;
+}
+
+%addButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  @include subTitle;
+  text-transform: lowercase;
+  border: 1px solid $border_primary;
+  border-radius: $radius-blocks;
+  background: $background_primary;
+  width: 100%;
+  cursor: pointer;
+  transition: all $trans-base;
+
+  @media (max-width: 396px) {
+    padding: 16px;
+  }
+
+  &:hover {
+    background: $background_primary_hover;
+  }
+}
+
+%addIcon {
+  @include square(16px);
+  @include icn;
+  transform-origin: center center;
+  fill: transparent;
+  z-index: 10;
+}
+
+%componentBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  border-radius: $radius-blocks;
+  border: 1px solid $border_primary;
+  background: $background_primary;
+  width: 100%;
+  text-transform: lowercase;
+  transition: background-color $trans-base;
+
+  @media (max-width: 396px) {
+    padding: 16px;
+  }
+
+  &:hover {
+    background: $background_primary_hover;
+
+    & svg {
+      opacity: 1;
+    }
+  }
+}
+
+%componentBadge {
+  display: flex;
+  padding: 4px 8px;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  border-radius: 8px;
+  background: $background_neutral;
+  color: $text_disabled;
+
+  //@media (max-width: 396px) {
+  //  //display: none;
+  //}
+}

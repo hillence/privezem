@@ -1,0 +1,31 @@
+var _path;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgThumbsUpIcon(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 28,
+    height: 28,
+    viewBox: "0 0 28 28",
+    fill: "none",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M12.4866 6.125C12.2926 6.125 12.1136 6.22905 12.0176 6.39756L8.11396 13.2497C7.59651 14.158 7.37936 15.2066 7.49354 16.2457L7.90554 19.9949C7.97885 20.662 8.50253 21.1904 9.16893 21.2697L11.6388 21.5635C13.2693 21.7575 14.9225 21.5893 16.4806 21.0711C17.25 20.8152 17.8664 20.2311 18.1633 19.4766L20.1514 14.4242C20.2 14.3007 20.2336 14.1718 20.2514 14.0403C20.4022 12.9295 19.4298 11.9925 18.3254 12.1843L14.3403 12.8764C13.0815 13.0951 11.9942 11.9842 12.2399 10.7303L13.0162 6.76851C13.0815 6.43511 12.8263 6.125 12.4866 6.125ZM10.497 5.5313C10.9043 4.81642 11.6638 4.37501 12.4865 4.375C13.9278 4.37499 15.0107 5.69062 14.7336 7.10501L13.9572 11.0669C13.9539 11.0838 13.9557 11.0942 13.958 11.1016C13.9609 11.1108 13.9668 11.1216 13.9766 11.1315C13.9863 11.1415 13.9969 11.1476 14.0061 11.1507C14.0134 11.1532 14.0238 11.1552 14.0408 11.1522L18.0259 10.4601C20.2965 10.0657 22.2955 11.9921 21.9855 14.2757C21.9488 14.5461 21.8798 14.8111 21.7798 15.065L19.7917 20.1174C19.3049 21.3545 18.2944 22.3121 17.0329 22.7317C15.2306 23.3311 13.3182 23.5256 11.4321 23.3013L8.96221 23.0074C7.4873 22.832 6.32825 21.6625 6.16601 20.1861L5.75401 16.4368C5.59953 15.031 5.89332 13.6123 6.59341 12.3834L10.497 5.5313Z",
+    fill: "#141824",
+    fillOpacity: 0.4
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgThumbsUpIcon);
+export default __webpack_public_path__ + "static/media/thumbsUpIcon.e86d1ded788f964551556d52fd72877f.svg";
+export { ForwardRef as ReactComponent };

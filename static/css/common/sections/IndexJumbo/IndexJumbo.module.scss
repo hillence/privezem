@@ -1,0 +1,145 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/typography';
+
+.section {
+  position: relative;
+  flex: 0 0 auto;
+  padding-top: 144px;
+  padding-bottom: 144px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+  &--has-bg .bg {
+    opacity: 1;
+  }
+}
+
+.pic {
+  width: 100%;
+  height: 100%;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 912px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bg {
+  @include absolute-layer;
+  pointer-events: none;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity $trans-base;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.title {
+  @include mainTitle;
+  cursor: default;
+  margin-right: auto;
+  margin-left: auto;
+  color: $text_variant;
+  text-align: center;
+  transition: color $trans-long;
+
+  &--invert {
+    color: $text_primary_invert;
+  }
+
+  @media (max-width: 576px) {
+    @include font-size(30px, 33px);
+  }
+}
+
+.search {
+  margin-top: 32px;
+
+  @include media(desktop) {
+    margin-right: 40px;
+  }
+
+  @media (max-width: 576px) {
+    margin-top: 24px;
+  }
+}
+
+.types {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  user-select: none;
+  margin-top: 48px;
+
+  &__item {
+    @include subTitle;
+    text-transform: lowercase;
+    position: relative;
+    color: $text_disabled;
+    padding: 4px;
+    cursor: pointer;
+    transition: color $trans-base, opacity $trans-base;
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 16px;
+      background: rgba($background_black, 0.20);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(8px, -50%);
+      user-select: none;
+    }
+  
+    &:last-child::after {
+      content: none;
+    }
+  
+    &:hover,
+    &:active {
+      color: $text_variant_hover;
+    }
+  
+    &.is-active {
+      color: $text_primary;
+      cursor: default;
+    }
+  }
+
+  &--invert &__item {
+    color: $text_primary_invert;
+    opacity: 0.4;
+
+    &::after {
+      background: rgba($background_primary, 0.2);
+    }
+
+    &.is-active {
+      color: $text_primary_invert;
+      opacity: 1;
+    }
+  }
+}

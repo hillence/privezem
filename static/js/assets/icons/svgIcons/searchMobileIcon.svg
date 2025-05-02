@@ -1,0 +1,30 @@
+var _path;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgSearchMobileIcon(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M15.2996 10.2016C15.2996 13.0182 13.0163 15.3016 10.1996 15.3016C7.38296 15.3016 5.09961 13.0182 5.09961 10.2016C5.09961 7.38491 7.38296 5.10156 10.1996 5.10156C13.0163 5.10156 15.2996 7.38491 15.2996 10.2016ZM14.3061 15.3687C13.1791 16.2656 11.7519 16.8016 10.1996 16.8016C6.55453 16.8016 3.59961 13.8466 3.59961 10.2016C3.59961 6.55648 6.55453 3.60156 10.1996 3.60156C13.8447 3.60156 16.7996 6.55648 16.7996 10.2016C16.7996 11.7539 16.2637 13.181 15.3668 14.3081L20.6909 19.6322C20.9838 19.9251 20.9838 20.3999 20.6909 20.6928C20.398 20.9857 19.9231 20.9857 19.6302 20.6928L14.3061 15.3687Z",
+    fill: "currentColor"
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgSearchMobileIcon);
+export default __webpack_public_path__ + "static/media/searchMobileIcon.91c283523fa31481f367556012301f5c.svg";
+export { ForwardRef as ReactComponent };

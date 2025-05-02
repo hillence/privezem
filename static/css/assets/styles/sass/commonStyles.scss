@@ -1,0 +1,212 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/typography';
+
+%overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all $trans-base;
+}
+
+%tubItem {
+  @include flexMain(flex, column, center, center);
+  padding: 8px 16px;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: 12px;
+  margin: 0;
+
+  & span {
+    @include text('Roboto Flex', 20px, 620, 115%, -0.4px, normal);
+    text-transform: lowercase;
+    color: $text_primary;
+    z-index: 1;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+%textareaStyles {
+  padding: 20px 16px;
+  outline-offset: 2px;
+  resize: none;
+  overflow-y: hidden;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid $border_primary;
+  transition: all $trans-base;
+}
+
+%btnStyles {
+  @include flexMain(flex, column, center, center);
+  @include text('Roboto Flex', 20px, 620, 115%, -0.4px, normal);
+  height: 64px;
+  padding: 0 24px;
+  align-self: stretch;
+  border-radius: 16px;
+  text-transform: lowercase;
+  transition: background 0.2s ease-in-out;
+}
+
+%inputStyles {
+  @include text('Roboto Flex', 20px, 500, 120%, -0.4px, normal);
+  color: $text_primary;
+  padding: 0 16px;
+  height: 64px;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 16px;
+  border: 1.5px solid $border_primary;
+
+  &::placeholder {
+    color: $text_tertiary;
+    text-transform: lowercase;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+//admin panel header styles start =======================================
+
+%activeFilterItem {
+  border-radius: 12px;
+  border: 1.5px solid $border_primary_active;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+%filterItem {
+  @include flexMain(flex, row, center, center);
+  padding: 8px 8px 8px 12px;
+  border-radius: 12px;
+  border: 1.5px solid $border_primary;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+//admin panel header styles end=======================================
+
+//admin panel modal styles start=======================================
+
+%rootModalContainer {
+  @include flexMain(flex, column, flex-start, flex-start);
+  padding: 32px 48px;
+  gap: 16px;
+  flex-shrink: 0;
+  position: fixed;
+  align-self: stretch;
+  width: 500px;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  right: -150%;
+  transition: right 0.3s ease-in-out;
+  background: #ffffff;
+  box-shadow: 0 5px 24px 0 rgba(25, 34, 39, 0.1);
+
+  @media (max-width: 376px) {
+    width: 100%;
+    padding: 24px 12px;
+  }
+}
+
+%closeModalIcon {
+  position: absolute;
+  right: 20px;
+  top: 28px;
+  width: 32px;
+  height: 32px;
+
+  @media (max-width: 576px) {
+    right: 20px;
+    top: 24px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+%rootModalContent {
+  scrollbar-width: none; /* Для Firefox */
+
+  overflow: hidden;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 32px;
+
+  width: 100%;
+  max-height: calc(100vh - 40px);
+  padding-bottom: 200px;
+
+  -ms-overflow-style: none; /* Для IE и Edge */
+  &::-webkit-scrollbar {
+    width: 0; /* Для Chrome, Safari и Opera */
+  }
+}
+
+//admin panel modal styles end=======================================
+
+//user account styles start=======================================
+%orderTabStyles {
+  @include flexMain(flex, row, center, flex-start);
+  @include pageTitle;
+  text-transform: lowercase;
+  gap: 8px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+%userAccountRootContainer {
+  @include flexMain(flex, row, flex-start, flex-start);
+  gap: 120px;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 65vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 130px 32px 96px;
+  transition: all $trans-base;
+
+  @media (max-width: $media-tablet-user-account) {
+    padding: 94px 32px 102px 32px;
+    min-height: 50vh;
+  }
+
+  @media (max-width: 576px) {
+    padding: 76px 20px 102px 20px;
+  }
+}
+
+%userAccountMenuBox {
+  padding-top: 130px;
+
+  @media (max-width: $media-tablet-user-account) {
+    display: none;
+  }
+}
+
+%userAccountContentBox {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 24px;
+  width: 100%;
+
+  @media (max-width: 376px) {
+    min-width: 100%;
+  }
+}
+
+//user account styles end=========================================

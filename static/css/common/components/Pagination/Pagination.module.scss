@@ -1,0 +1,52 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.paginationBox {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 24px 0;
+
+  .paginationItem {
+    @include flexMain(flex, column, center, center);
+    @include textBase;
+    gap: 10px;
+    width: 24px;
+    height: 24px;
+    color: $text_disabled;
+    transition: color $trans-base;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    & img {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .active {
+    color: $text_primary;
+    transition: color $trans-base;
+  }
+
+  .dots {
+    @include textBase;
+    overflow: hidden;
+    display: -webkit-box;
+    width: 24px;
+    height: 24px;
+    color: $text_disabled;
+    text-align: center;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  //@media (max-width: 376px) {
+  //  padding-bottom: 120px;
+  //}
+}

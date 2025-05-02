@@ -1,0 +1,37 @@
+var _path, _path2, _path3, _path4;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgYoox(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 80,
+    height: 80,
+    viewBox: "0 0 80 80",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M16.0708 29.1641H19.0269L20.3955 33.6765C20.4424 33.8094 20.4815 33.958 20.5284 34.1222C20.5754 34.2864 20.6301 34.4585 20.6927 34.6462C21.1306 35.9913 21.4825 37.3677 21.7406 38.7597C21.9048 37.6492 22.0378 36.875 22.1473 36.4371L22.5774 34.5836L22.7416 33.8563L23.8912 29.1641H26.8083L23.1952 40.9807V49.896H20.3955V40.9807L16.0708 29.1641Z",
+    fill: "currentColor"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M38.5544 40.0425C38.5544 43.7025 38.1477 46.3067 37.3344 47.8473C36.5211 49.388 35.1525 50.1544 33.2365 50.1544C31.2188 50.1544 29.8033 49.3332 28.9822 47.6831C28.1689 46.0565 27.7622 43.1785 27.7622 39.0415C27.7622 35.3503 28.1689 32.7383 28.9744 31.2055C29.7799 29.6727 31.1563 28.9063 33.1114 28.8984C34.8475 28.8984 36.1379 29.4928 36.9825 30.6815C37.5377 31.4792 37.9444 32.6131 38.1947 34.0834C38.4215 35.4441 38.5544 37.4305 38.5544 40.0425ZM35.6217 40.3397C35.6217 36.7501 35.4575 34.3649 35.1369 33.1919C34.8162 32.0188 34.1593 31.4323 33.1583 31.4166C32.1651 31.4166 31.5004 31.9562 31.1719 33.0433C30.8435 34.1303 30.6792 36.32 30.687 39.6281C30.687 42.6624 30.8591 44.7661 31.1954 45.9392C31.5473 47.0497 32.1964 47.6049 33.1583 47.6049C34.1202 47.6049 34.7615 47.0888 35.0899 46.0486C35.4497 45.0163 35.6217 43.116 35.6217 40.3397Z",
+    fill: "currentColor"
+  })), _path3 || (_path3 = /*#__PURE__*/React.createElement("path", {
+    d: "M51.7106 40.0425C51.7106 43.7025 51.304 46.3067 50.4907 47.8473C49.6773 49.388 48.3088 50.1544 46.3928 50.1544C44.3751 50.1544 42.9596 49.3332 42.1384 47.6831C41.3251 46.0643 40.9185 43.1864 40.9185 39.0494C40.9185 35.3581 41.3251 32.7461 42.1306 31.2133C42.9361 29.6805 44.3203 28.9063 46.2755 28.8984C48.0116 28.8984 49.302 29.4928 50.1466 30.6815C50.7018 31.4792 51.1085 32.6131 51.3587 34.0834C51.5855 35.4441 51.7106 37.4305 51.7106 40.0425ZM48.7858 40.3397C48.7858 36.7501 48.6216 34.3649 48.3009 33.1919C47.9803 32.0188 47.3234 31.4323 46.3224 31.4166C45.3292 31.4166 44.6644 31.9562 44.336 33.0433C44.0075 34.1303 43.8433 36.32 43.8511 39.6281C43.8511 42.6624 44.0232 44.7661 44.3594 45.9392C44.7114 47.0497 45.3605 47.6049 46.3224 47.6049C47.2843 47.6049 47.9256 47.0888 48.254 46.0486C48.6059 45.0163 48.7858 43.116 48.7858 40.3397Z",
+    fill: "currentColor"
+  })), _path4 || (_path4 = /*#__PURE__*/React.createElement("path", {
+    d: "M52.7859 29.1641H55.4996L56.9385 33.1838C57.5016 34.7713 57.8379 35.9287 57.9474 36.6639C58.049 36.2103 58.1585 35.7645 58.2758 35.3344C58.3931 34.9043 58.5261 34.4741 58.659 34.044L58.8467 33.4418L60.1762 29.1719H62.9994L59.1517 39.3854L62.9994 49.9195H60.1762L58.8154 45.9702C58.5339 45.1803 58.3149 44.4765 58.1429 43.8508C57.9865 43.3034 57.8613 42.7403 57.7753 42.1773C57.7049 42.756 57.5876 43.3347 57.4156 43.8899L56.9464 45.368L56.7039 46.15L55.5074 49.9117H52.5513L56.4693 39.3775L52.7859 29.1641Z",
+    fill: "currentColor"
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgYoox);
+export default __webpack_public_path__ + "static/media/yoox.8f5191eb6ba9b019b39ff36b14133a32.svg";
+export { ForwardRef as ReactComponent };

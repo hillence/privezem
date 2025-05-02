@@ -1,0 +1,39 @@
+var _path, _path2, _path3;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgContactsIcon(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M9.99994 8.99837C9.99994 7.89381 10.8954 6.99837 11.9999 6.99837C13.1045 6.99837 13.9999 7.89381 13.9999 8.99837C13.9999 10.1029 13.1045 10.9984 11.9999 10.9984C10.8954 10.9984 9.99994 10.1029 9.99994 8.99837Z",
+    fill: "#141824",
+    fillOpacity: 0.4
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M10.9999 12.4984C9.34308 12.4984 7.99994 13.8415 7.99994 15.4984C7.99994 16.0507 8.44765 16.4984 8.99994 16.4984H14.9999C15.5522 16.4984 15.9999 16.0507 15.9999 15.4984C15.9999 13.8415 14.6568 12.4984 12.9999 12.4984H10.9999Z",
+    fill: "#141824",
+    fillOpacity: 0.4
+  })), _path3 || (_path3 = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M7.54347 2.88106C10.4993 2.45631 13.5006 2.45631 16.4564 2.88106C17.9219 3.09164 19.051 4.28103 19.1851 5.75549L19.3121 7.15122C19.6055 10.376 19.6055 13.6208 19.3121 16.8455L19.1851 18.2413C19.051 19.7157 17.9219 20.9051 16.4564 21.1157C13.5006 21.5404 10.4993 21.5404 7.54347 21.1157C6.07798 20.9051 4.94888 19.7157 4.81475 18.2413L4.68779 16.8455C4.39444 13.6208 4.39444 10.376 4.68779 7.15122L4.81475 5.75549C4.94888 4.28104 6.07798 3.09164 7.54347 2.88106ZM16.2431 4.36581C13.4288 3.9614 10.5711 3.9614 7.75682 4.36581C6.97903 4.47757 6.37977 5.10883 6.30859 5.89138L6.18162 7.28712C5.89649 10.4215 5.89649 13.5753 6.18162 16.7096L6.30859 18.1054C6.37977 18.8879 6.97903 19.5192 7.75682 19.6309C10.5711 20.0354 13.4288 20.0354 16.2431 19.6309C17.0209 19.5192 17.6201 18.8879 17.6913 18.1054L17.8183 16.7096C18.1034 13.5753 18.1034 10.4215 17.8183 7.28711L17.6913 5.89138C17.6201 5.10883 17.0209 4.47757 16.2431 4.36581Z",
+    fill: "#141824",
+    fillOpacity: 0.4
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgContactsIcon);
+export default __webpack_public_path__ + "static/media/contactsIcon.6a6be88c112b08bc41cd5f35be7dced4.svg";
+export { ForwardRef as ReactComponent };

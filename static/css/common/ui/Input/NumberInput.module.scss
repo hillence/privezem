@@ -1,0 +1,112 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/typography';
+
+.block {
+  position: relative;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  height: $controll-small;
+  padding: 0 7px;
+  background: $background_object;
+  border: 1.5px solid $border_primary;
+  border-radius: 12px;
+  transition: border $trans-base, box-shadow $trans-base;
+
+
+  &:hover,
+  &:focus-within {
+    border-color: $border_primary_accent;
+    box-shadow: $shadow-block;
+  }
+}
+
+.input {
+  @include textBase;
+  touch-action: manipulation;
+  user-select: none;
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  transition: border $trans-base, box-shadow $trans-base, background-color $trans-base,
+    color $trans-base;
+
+  // state
+  &--has-error:hover,
+  &--has-error:focus,
+  &--has-error {
+    border-color: $system_error;
+  }
+
+  &--has-load {
+    padding-right: 56px;
+  }
+}
+
+.quantityBtn {
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: $icon-primary-color;
+  border-radius: $radius-min;
+  background: transparent;
+  border: none;
+  outline: none;
+  transition: all $trans-base;
+
+  &--disabled {
+    color: $icon-secondary-color;
+  }
+
+  &:hover {
+    background-color: $background_primary_active;
+  }
+}
+
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+  margin: 0;
+
+  -webkit-appearance: none;
+}
+
+.error {
+  display: block;
+  display: none;
+  margin-top: 4px;
+  color: $system_error;
+
+  .block--has-error & {
+    @include textCaption;
+    display: block;
+  }
+}
+
+.load {
+  top: 50%;
+  right: 20px;
+  transform: translate(0, -50%);
+  transition: opacity $trans-base;
+
+  .block--has-load & {
+    position: absolute;
+  }
+}
+
+.plusIcon,
+.minusIcon {
+  @include icn;
+  @include square(12px);
+}

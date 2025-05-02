@@ -1,0 +1,102 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  @extend %userAccountRootContainer;
+  flex-direction: column;
+  max-width: 631px;
+  gap: 48px;
+  padding: 154px 0 100px;
+
+  &--second {
+    @extend .container;
+    padding: 0 0 99px;
+  }
+
+  @media (max-width: 769px) {
+    padding: 120px 20px 100px;
+
+    &--second {
+      padding: 0 20px 100px;
+    }
+  }
+
+  .title {
+    @include pageTitle;
+    font-style: normal;
+    font-weight: 620;
+    line-height: 100%; /* 40px */
+    text-transform: lowercase;
+    letter-spacing: -0.8px;
+    color: $text_primary;
+
+    @media (max-width: 769px) {
+      white-space: normal;
+    }
+  }
+
+  .description {
+    @include textBase;
+    color: $text_secondary;
+  }
+
+  .contentBox {
+    @include flexMain(flex, column, flex-start, flex-start);
+    gap: 24px;
+
+    .subTitle {
+      @include subTitle;
+      color: $text_primary;
+      text-transform: lowercase;
+      font-weight: 620;
+    }
+
+    .content {
+      @include flexMain(flex, column, flex-start, flex-start);
+      @include textBase;
+      color: $text_secondary;
+      gap: 16px;
+
+      .subContent {
+        padding-left: 24px;
+      }
+      .sub {
+        padding-left: 48px;
+      }
+    }
+  }
+
+  .requisitesBox {
+    @include flexMain(flex, column, flex-start, flex-start);
+    gap: 16px;
+    max-width: 475px;
+    width: 100%;
+    align-self: stretch;
+
+    .requisiteItem {
+      @include flexMain(flex, column, flex-start, flex-start);
+      gap: 8px;
+      align-self: stretch;
+
+      .requisiteItemTitle {
+        @include textCaption;
+        color: $text_secondary;
+        font-style: normal;
+      }
+
+      .requisiteItemDescription {
+        @include textBase;
+        color: $text_primary;
+        font-style: normal;
+      }
+    }
+  }
+
+  .notice {
+    @include textSmall;
+    font-style: italic;
+    color: $text_primary;
+  }
+}

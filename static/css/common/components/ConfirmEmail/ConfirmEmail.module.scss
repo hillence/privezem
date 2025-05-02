@@ -1,0 +1,32 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  @include flexMain(flex, column, flex-start, space-between);
+  gap: 24px;
+  padding: 32px;
+  box-shadow: 0 5px 24px 0 rgba(25, 34, 39, 0.1);
+  border-radius: 16px;
+}
+
+.content {
+  @include flexMain(flex, column, flex-start, flex-start);
+  gap: 8px;
+}
+
+.title {
+  @include blockTitle;
+  text-transform: lowercase;
+}
+
+.description {
+  @include textBase;
+  color: $text_variant_hover;
+}
+
+.button {
+  max-width: 264px;
+  width: 100%;
+}

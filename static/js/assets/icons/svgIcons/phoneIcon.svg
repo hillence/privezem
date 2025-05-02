@@ -1,0 +1,30 @@
+var _path;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgPhoneIcon(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 20,
+    height: 20,
+    viewBox: "0 0 20 20",
+    fill: "none",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M4.86682 8.21478C6.35624 11.458 9.00665 14.0365 12.3015 15.4337L12.3119 15.4381L12.9484 15.7218C13.7589 16.0829 14.7116 15.8264 15.2313 15.1072L16.2932 13.6374C16.3581 13.5476 16.3414 13.4228 16.2552 13.3532L14.4012 11.8576C14.3091 11.7832 14.1735 11.8005 14.103 11.8957L13.3815 12.8693C13.2062 13.1058 12.8898 13.188 12.6216 13.0666C10.158 11.9517 8.17822 9.97191 7.06328 7.50824C6.94193 7.2401 7.0241 6.92364 7.26056 6.74841L8.2342 6.02686C8.32934 5.95635 8.34666 5.82083 8.27231 5.72867L6.77644 3.87446C6.70691 3.78829 6.58213 3.77155 6.49235 3.83636L5.01461 4.90316C4.29062 5.42581 4.03565 6.38652 4.4052 7.19939L4.86632 8.21369C4.86649 8.21406 4.86665 8.21442 4.86682 8.21478ZM11.8082 16.5822C8.22818 15.0626 5.34871 12.2601 3.73034 8.73527L3.72936 8.73315L3.26728 7.71672C2.65136 6.36193 3.0763 4.76075 4.28295 3.88966L5.76069 2.82286C6.38913 2.36919 7.26265 2.48636 7.74932 3.0896L9.24518 4.9438C9.76565 5.58895 9.64442 6.53761 8.97846 7.03114L8.42054 7.4446C9.36297 9.27326 10.8566 10.7669 12.6853 11.7093L13.0987 11.1514C13.5923 10.4855 14.5409 10.3642 15.1861 10.8847L17.04 12.3804C17.6435 12.8672 17.7605 13.741 17.3064 14.3695L16.2444 15.8393C15.3783 17.038 13.7905 17.4654 12.4396 16.8636L11.8082 16.5822Z",
+    fill: "black"
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgPhoneIcon);
+export default __webpack_public_path__ + "static/media/phoneIcon.e59bbb343647a96373e96bb9d5df7abb.svg";
+export { ForwardRef as ReactComponent };

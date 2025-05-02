@@ -1,0 +1,116 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/typography';
+
+.section {
+  flex: 0 0 auto;
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+  @media (max-width: 576px) {
+    padding-bottom: 32px;
+  }
+}
+
+.wrapper {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.title {
+  @include pageTitle;
+  display: block;
+  margin-bottom: 48px;
+  text-transform: lowercase;
+
+  @media (max-width: 576px) {
+    margin-bottom: 32px;
+  }
+}
+
+.list {
+}
+
+.listItem {
+  cursor: pointer;
+  border-top: 2px solid $button_primary;
+
+  &.is-active {
+    cursor: default;
+  }
+
+  & ol {
+    list-style: initial;
+  }
+}
+
+.listHead {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-right: 40px;
+  //z-index: 10;
+}
+
+.listTitle {
+  @include blockTitle;
+  text-transform: lowercase;
+}
+
+.listIcn {
+  @include square(32px);
+  @include icn;
+  position: absolute;
+  top: calc(50% - 16px);
+  right: 0;
+  transform-origin: center center;
+  fill: transparent;
+  transition: transform $trans-base;
+  //z-index: 4;
+
+  &.is-active {
+    transform: rotate(180deg);
+  }
+}
+
+.listBody {
+  @include textBase;
+  overflow: hidden;
+  max-height: 0;
+  color: $text_secondary;
+  transition: max-height ease 0.2s;
+
+  &.is-active {
+    max-height: 350px;
+  }
+}
+
+.listText {
+  padding-bottom: 32px;
+}
+
+.iframe {
+  @include flexMain(flex, column, center, center);
+  height: 493px;
+  width: 880px;
+  border-radius: 16px;
+  box-shadow: 0 5px 24px 0 rgba(25, 34, 39, 0.1);
+
+  @media (max-width: 900px) {
+    width: 660px;
+    height: 350px;
+  }
+  @media (max-width: 768px) {
+    width: 600px;
+    height: 350px;
+  }
+
+  @media (max-width: 620px) {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.iconBox {
+  display: none;
+}

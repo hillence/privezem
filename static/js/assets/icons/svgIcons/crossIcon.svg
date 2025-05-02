@@ -1,0 +1,33 @@
+var _path, _path2;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgCrossIcon(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M8.46943 8.46753C8.76232 8.17463 9.23719 8.17463 9.53009 8.46753L11.9998 10.9372L14.4694 8.46753C14.7623 8.17464 15.2372 8.17464 15.5301 8.46753C15.823 8.76043 15.823 9.2353 15.5301 9.52819L13.0604 11.9979L15.5301 14.4675C15.823 14.7604 15.823 15.2353 15.5301 15.5282C15.2372 15.8211 14.7623 15.8211 14.4694 15.5282L11.9998 13.0585L9.53009 15.5282C9.2372 15.8211 8.76233 15.8211 8.46943 15.5282C8.17654 15.2353 8.17654 14.7604 8.46943 14.4675L10.9391 11.9979L8.46943 9.52818C8.17653 9.23529 8.17653 8.76042 8.46943 8.46753Z",
+    fill: "black"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M7.31649 3.76662C10.404 3.42154 13.5954 3.42154 16.683 3.76662C18.5094 3.97075 19.9843 5.40939 20.1991 7.24635C20.5683 10.4033 20.5683 13.5925 20.1991 16.7494C19.9843 18.5863 18.5094 20.025 16.683 20.2291C13.5954 20.5742 10.404 20.5742 7.31649 20.2291C5.49011 20.025 4.01521 18.5863 3.80036 16.7494C3.43113 13.5925 3.43113 10.4033 3.80036 7.24635C4.01521 5.40939 5.49011 3.97075 7.31649 3.76662ZM16.5164 5.25734C13.5396 4.92464 10.4599 4.92464 7.4831 5.25734C6.33867 5.38525 5.42262 6.28849 5.29021 7.4206C4.93451 10.4618 4.93451 13.534 5.29021 16.5751C5.42262 17.7072 6.33867 18.6105 7.4831 18.7384C10.4599 19.0711 13.5396 19.0711 16.5164 18.7384C17.6608 18.6105 18.5769 17.7072 18.7093 16.5751C19.065 13.534 19.065 10.4618 18.7093 7.4206C18.5769 6.28849 17.6608 5.38525 16.5164 5.25734Z",
+    fill: "black"
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgCrossIcon);
+export default __webpack_public_path__ + "static/media/crossIcon.b81627f0b607d4d646203684a3b9111c.svg";
+export { ForwardRef as ReactComponent };

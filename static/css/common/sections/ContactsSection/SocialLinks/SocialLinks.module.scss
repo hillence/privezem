@@ -1,0 +1,53 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/typography';
+
+.list {
+  display: inline-flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+  vertical-align: top;
+
+  @media (max-width: 376px) {
+    gap: 10px;
+  }
+}
+
+.item {
+
+}
+
+.el {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  color: $text_primary_invert;
+  background: rgba($text_primary_invert, 0.14);
+  border-radius: $radius-base;
+  transition: color $trans-base;
+
+  @media (max-width: 376px) {
+    width: 52px;
+    height: 52px;
+    border-radius: $radius-blocks;
+  }
+
+  &:hover {
+    color: $text_primary_invert_disabled;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  .icon {
+    @media (max-width: 376px) {
+      width: 32px;
+      height: 32px;
+
+    }
+  }
+}

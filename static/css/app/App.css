@@ -1,0 +1,46 @@
+.load {
+    overflow: hidden !important;
+  }
+  
+  .modal-open {
+    overflow: hidden;
+  }
+  
+  /*.body {*/
+  /*  scrollbar-color: transparent transparent;*/
+  /*  scrollbar-width: thin;*/
+  
+  /*  !* Для Internet Explorer *!*/
+  /*  -ms-overflow-style: none;*/
+  /*  !* Для остальных браузеров, где поддерживается "scrollbar-width" и "scrollbar-color" *!*/
+  /*  &::-webkit-scrollbar {*/
+  /*    width: 0; !* Ширина полосы прокрутки *!*/
+  /*    height: 0; !* Высота полосы прокрутки *!*/
+  /*  }*/
+  
+  /*  &::-webkit-scrollbar-thumb {*/
+  /*    background-color: transparent; !* Цвет полосы прокрутки *!*/
+  /*    border-radius: 4px; !* Закругление углов полосы прокрутки *!*/
+  /*  }*/
+  /*}*/
+  html {
+    scrollbar-width: none; /* Firefox */
+  
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    transition: background-color 5000s ease-in-out 0.1s;
+  }

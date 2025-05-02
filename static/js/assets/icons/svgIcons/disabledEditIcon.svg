@@ -1,0 +1,35 @@
+var _path, _path2;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgDisabledEditIcon(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 20,
+    height: 20,
+    viewBox: "0 0 20 20",
+    fill: "none",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M17.8803 4.51313C18.0404 4.75572 18.0137 5.0854 17.8002 5.29896L10.1399 12.9593C10.0613 13.0378 9.9633 13.094 9.85586 13.1221L6.66551 13.9554C6.56145 13.9826 6.45419 13.982 6.35342 13.9564C6.24628 13.9291 6.14647 13.8735 6.06562 13.7926C5.90873 13.6357 5.84678 13.4074 5.90285 13.1927L6.73619 10.0024C6.76074 9.90836 6.80682 9.81551 6.87056 9.74268L14.5593 2.05806C14.6266 1.99076 14.7077 1.94038 14.7959 1.90969C14.8613 1.88694 14.9306 1.875 15.0012 1.875C15.167 1.875 15.3259 1.94085 15.4432 2.05806L17.8002 4.41508C17.8307 4.44559 17.8574 4.47847 17.8803 4.51313ZM16.4743 4.85702L15.0012 3.38388L7.90274 10.4824L7.38192 12.4763L9.37589 11.9555L16.4743 4.85702Z",
+    fill: "#141824",
+    fillOpacity: 0.4
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M16.369 14.3003C16.5968 12.3522 16.6693 10.3906 16.5865 8.43399C16.5825 8.34031 16.6178 8.24915 16.6841 8.18285L17.5035 7.36341C17.6042 7.26266 17.7764 7.32662 17.7858 7.46878C17.9399 9.79349 17.8815 12.1288 17.6105 14.4455C17.4134 16.1309 16.0598 17.4517 14.3831 17.6391C11.4943 17.962 8.50817 17.962 5.61935 17.6391C3.94264 17.4517 2.58903 16.1309 2.3919 14.4455C2.04645 11.4919 2.04645 8.50811 2.3919 5.55452C2.58903 3.86908 3.94264 2.54824 5.61935 2.36084C7.81081 2.11592 10.0583 2.05679 12.2768 2.18347C12.4197 2.19163 12.4849 2.36465 12.3836 2.46591L11.5565 3.29304C11.4909 3.35862 11.401 3.39384 11.3083 3.39071C9.45297 3.32814 7.58501 3.39894 5.75819 3.60311C4.64977 3.72699 3.76186 4.60167 3.63344 5.69973C3.29927 8.55684 3.29927 11.4432 3.63344 14.3003C3.76186 15.3983 4.64977 16.273 5.75819 16.3969C8.55473 16.7094 11.4477 16.7094 14.2443 16.3969C15.3527 16.273 16.2406 15.3983 16.369 14.3003Z",
+    fill: "#141824",
+    fillOpacity: 0.4
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgDisabledEditIcon);
+export default __webpack_public_path__ + "static/media/disabledEditIcon.2d3a62587a1a92e55a8751a5c592323e.svg";
+export { ForwardRef as ReactComponent };
