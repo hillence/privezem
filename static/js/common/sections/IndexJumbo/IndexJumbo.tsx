@@ -80,7 +80,7 @@ const IndexJumbo = () => {
             <h1 className={`${styles.title} ${hasBg ? styles['title--invert'] : ''}`}>
               Доставка товаров <br />
               {/* eslint-disable-next-line no-irregular-whitespace */}
-              в Россию
+              в Бельгию
             </h1>
 
             <JumboSearch className={styles.search} hasBg={hasBg} />
