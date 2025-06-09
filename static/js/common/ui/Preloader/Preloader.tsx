@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './Preloader.module.scss'
 
-import { ReactComponent as Logo } from 'assets/icons/svgIcons/preloader.svg'
+import { ReactComponent as Logo } from '
 
 export const Preloader = (props: PreloaderPropsType) => {
   const { isDomLoaded } = props
