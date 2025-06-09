@@ -37,12 +37,12 @@ const ContactsSection = () => {
             <ul className={styles.phones}>
               <li>
                 <a className={styles.phonesEl} href="mailto:info@ohreally.ru">
-                  info@ohreally.ru
+                  info@privezem.ru
                 </a>
               </li>
               <li>
                 <a className={styles.phonesEl} href="tel:+7(495)085-95-95">
-                  +7 (495) 085-95-95
+                  +7 (495) 899-20-45
                 </a>
               </li>
             </ul>
