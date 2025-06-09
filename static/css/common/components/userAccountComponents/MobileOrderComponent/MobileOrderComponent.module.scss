@@ -1,0 +1,40 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  @include flexMain(flex, column, flex-start, flex-start);
+  align-self: stretch;
+  gap: 32px;
+  //display: none;
+
+  //@media (max-width: 576px) {
+  //  display: flex;
+  //}
+
+  .orderItem {
+    @include flexMain(flex, column, flex-start, flex-start);
+    padding-bottom: 20px;
+    align-self: stretch;
+    border-bottom: 1px solid $border_primary;
+    gap: 12px;
+
+    .itemStatus {
+    }
+
+    .itemTitle {
+      @include textBaseAccent;
+      font-weight: 620;
+      font-size: 18px;
+    }
+
+    .itemPrice {
+      @include textSecondary;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      letter-spacing: -0.01em;
+    }
+  }
+}

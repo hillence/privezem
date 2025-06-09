@@ -1,0 +1,67 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.modalBox {
+  @include flexMain(flex, column, center, flex-start);
+
+  gap: 16px;
+  align-self: stretch;
+
+  height: 100%;
+
+  .header {
+    @include flexMain(flex, column, center, flex-start);
+    gap: 16px;
+
+    .title {
+      @include subTitle;
+
+      text-transform: lowercase;
+      white-space: nowrap;
+    }
+
+    .text {
+      @include textBase;
+      color: $text_secondary;
+    }
+  }
+
+  .contentBox {
+    @include flexMain(flex, column, space-between, center);
+
+    align-self: stretch;
+
+    height: 100%;
+
+    .textareaBox {
+      align-self: stretch;
+
+      width: 100%;
+      margin: 20px 0;
+
+      & textarea {
+        @extend %textareaStyles;
+
+        @include textPrimary;
+
+        &::placeholder {
+          @include textPrimary;
+
+          color: $text_tertiary;
+          text-transform: lowercase;
+        }
+
+        &:focus {
+          border: 1px solid $border_primary_active;
+          outline: none;
+          box-shadow: 0 4px 16px 0 rgba(25, 34, 39, 0.05);
+        }
+      }
+    }
+    .buttonBox {
+      align-self: stretch;
+    }
+  }
+}

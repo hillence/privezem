@@ -1,0 +1,6 @@
+@import 'src/assets/styles/sass/commonStyles';
+
+.overlay {
+  @extend %overlay;
+  z-index: $z-toast;
+}

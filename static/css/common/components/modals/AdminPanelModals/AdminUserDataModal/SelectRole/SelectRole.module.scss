@@ -1,0 +1,88 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.selectBox {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 16px;
+  align-self: stretch;
+  position: relative;
+  cursor: pointer;
+}
+
+.label {
+  @include text('Roboto Flex', 20px, 620, 115%, -0.4px, normal);
+  color: $text_primary;
+  text-transform: lowercase;
+}
+
+.roleBox {
+  @include flexMain(flex, row, flex-start, center);
+  gap: 8px;
+  align-self: stretch;
+  padding: 0 16px;
+  border-radius: 16px;
+  border: 2px solid $border_primary;
+  height: 64px;
+}
+
+.role {
+  @include flexMain(flex, column, center, flex-start);
+  width: 100%;
+  @include text('Roboto Flex', 20px, 500, 120%, -0.4px, normal);
+  text-transform: lowercase;
+}
+
+.icon {
+  @include square(24px);
+  @include icn;
+  transform-origin: center center;
+  fill: transparent;
+  transition: all $trans-base;
+
+  &.is-active {
+    transform: rotate(180deg);
+  }
+}
+
+.selectMenu {
+  @include flexMain(flex, column, center, flex-start);
+  align-self: stretch;
+  position: absolute;
+  transform: translateY(100%);
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  bottom: 0;
+  border-radius: 16px;
+  background: $background_primary;
+  border: 1px solid $border_primary;
+  box-shadow: 0 5px 24px 0 rgba(25, 34, 39, 0.1);
+  transition: all $trans-base;
+  box-sizing: border-box;
+  z-index: 100;
+  visibility: hidden;
+
+  &.is-active {
+    max-height: 500px;
+    visibility: visible;
+  }
+}
+
+.item {
+  @include flexMain(flex, column, center, flex-start);
+  align-self: stretch;
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 48px;
+  width: 100%;
+  transition: background-color $trans-base;
+
+  @include text('Roboto Flex', 20px, 500, 120%, -0.4px, normal);
+  text-transform: lowercase;
+
+  &:hover {
+    background: $background_primary_hover;
+  }
+}

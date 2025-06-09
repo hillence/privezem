@@ -1,0 +1,76 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.searchBox {
+  @include flexMain(flex, column, center, center);
+  gap: 24px;
+  align-self: stretch;
+  padding: 48px 338px;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 48px 32px;
+  }
+
+  @media (max-width: 376px) {
+    gap: 20px;
+    padding: 72px 16px;
+  }
+
+  .searchTitle {
+    @include pageTitle;
+    color: $text_primary;
+    text-transform: lowercase;
+    white-space: nowrap;
+
+    @media (max-width: 376px) {
+      @include blockTitle;
+      font-size: 26px !important;
+    }
+  }
+
+  .searchInput {
+    @extend %filterItem;
+    gap: 8px;
+
+    padding: 0 16px;
+    transition: all 0.3s ease-in-out;
+    width: 764px;
+    height: 64px;
+
+    @media (max-width: 1024px) {
+      //max-width: 704px;
+      width: 100%;
+    }
+
+    @media (max-width: 376px) {
+      width: 100%;
+    }
+
+    & input {
+      @include textBase;
+      font-size: 20px;
+      width: 100%;
+      letter-spacing: unset;
+      background: transparent;
+      border: 1.5px solid transparent;
+      border-radius: $radius-input-base;
+      outline: none !important;
+      transition: border $trans-base, box-shadow $trans-base;
+
+      &::placeholder {
+        @include textBase;
+        color: $text_disabled;
+        font-size: 17px;
+      }
+    }
+
+    &:focus-within {
+      outline: 1px solid $border_primary_accent;
+      box-shadow: 0 4px 16px 0 rgba(25, 34, 39, 0.05);
+    }
+  }
+}

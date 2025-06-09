@@ -1,0 +1,58 @@
+@import 'assets/styles/sass/variables';
+@import 'assets/styles/sass/mixins';
+@import 'assets/styles/sass/commonStyles';
+@import 'assets/styles/sass/typography';
+
+.mainContainer {
+  @include flexMain(flex, column, flex-start, flex-start);
+  align-self: stretch;
+  width: 100%;
+  gap: 16px;
+  padding-top: 32px;
+
+  @media (max-width: 576px) {
+    width: 335px;
+  }
+
+  .headerBox {
+    @include flexMain(flex, column, center, flex-start);
+    align-self: stretch;
+    padding: 0 32px;
+    gap: 12px;
+
+    .title {
+      @include subTitle;
+      text-align: center;
+      font-weight: 640;
+      line-height: 110%;
+      letter-spacing: -0.4px;
+      text-transform: lowercase;
+      color: $text_primary;
+    }
+
+    .description {
+      @include textBase;
+      white-space: nowrap;
+      color: $text_secondary;
+    }
+  }
+
+  .actionsBox {
+    @include flexMain(flex, row, center, center);
+    padding: 16px 24px 24px 24px;
+    align-self: stretch;
+    gap: 12px;
+
+    @media (max-width: 576px) {
+      @include flexMain(flex, column-reverse, center, center);
+    }
+
+    .btn {
+      width: 170px;
+
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+    }
+  }
+}

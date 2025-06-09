@@ -1,0 +1,81 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  //@include flexMain(flex, column, center, flex-start);
+  align-self: stretch;
+
+  .orderItem {
+    @include flexMain(flex, row, flex-start, flex-start);
+    align-self: stretch;
+    padding: 32px 0;
+    border-bottom: 1px solid $border_primary;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    //@media (max-width: 576px) {
+    //  display: none;
+    //}
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .orderInfo {
+      @include flexMain(flex, column, flex-start, flex-start);
+      align-self: stretch;
+      gap: 12px;
+      width: 100%;
+      //padding: 0 24px;
+
+      @media (max-width: 769px) {
+        padding: 0;
+      }
+
+      .orderTitle {
+        @include subTitle;
+        color: $text_primary;
+        text-transform: lowercase;
+        font-weight: 620;
+      }
+
+      .goodsImgBox {
+        width: 60px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 12px;
+      }
+    }
+
+    .orderDescription {
+      @include flexMain(flex, column, flex-start, flex-end);
+      align-self: stretch;
+      gap: 24px;
+
+      .orderPrice {
+        @include flexMain(flex, column, flex-start, flex-end);
+        @include subTitle;
+        color: $text_primary;
+        text-transform: lowercase;
+        align-items: flex-end;
+        flex: 1 0 0;
+        font-weight: 620;
+        white-space: nowrap;
+
+        //@media (min-width: 769px) {
+        //  white-space: nowrap;
+        //}
+      }
+
+      .orderStatus {
+        padding: 12px 16px;
+        border-radius: 12px;
+      }
+    }
+  }
+}

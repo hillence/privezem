@@ -1,0 +1,30 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.box {
+  @include flexMain(flex, column, flex-start, flex-start);
+  width: 100%;
+  height: auto;
+  gap: 24px;
+  max-width: 678px;
+
+  @media (max-width: $media-tablet-user-account) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 376px) {
+    gap: 32px;
+  }
+
+  .contentBox {
+    @include flexMain(flex, column, center, center);
+    width: 100%;
+
+    .ordersList {
+      @include flexMain(flex, column, center, flex-start);
+      align-self: stretch;
+    }
+  }
+}

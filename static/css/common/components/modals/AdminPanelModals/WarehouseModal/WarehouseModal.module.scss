@@ -1,0 +1,46 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.box {
+  @include flexMain(flex, column, center, flex-start);
+  align-self: stretch;
+}
+
+.title {
+  @include blockTitle;
+  text-transform: lowercase;
+  padding-bottom: 36px;
+  width: 100%;
+}
+
+.content {
+  @extend %rootModalContent;
+  align-self: stretch;
+  padding-bottom: 60px;
+}
+
+.form {
+}
+
+.inputBox {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 16px;
+  align-self: stretch;
+}
+
+.addPhoneBtn {
+  padding: 0;
+}
+
+.btnBox {
+  @include flexMain(flex, column, flex-end, center);
+  gap: 16px;
+  align-self: stretch;
+  margin-top: 32px;
+}
+
+.deleteBtn {
+  color: $system_error;
+}

@@ -1,0 +1,30 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+
+.orderStatusBox {
+  @include flexMain(flex, row, center, center);
+  position: relative;
+  gap: 8px;
+  width: fit-content;
+  padding: 8px 12px;
+  border: 1px solid $border_secondary;
+  border-radius: 8px;
+  //z-index: 21;
+
+  .statusColorBox {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  & span {
+    @include text('Roboto Flex', 16px, 500, 130%, -0.16px, normal);
+    white-space: nowrap;
+  }
+}
+
+.active {
+  background-color: $background_primary;
+  outline: 1.5px solid $border_primary_accent;
+  //border: 1.5px solid #2b2b2b;
+}

@@ -1,0 +1,304 @@
+.UserAccount_container__L6nIG {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    min-height: 65vh;
+    padding: 130px 32px 96px;
+    transition: all .3s ease-out;
+    width: 100%
+}
+
+@media (max-width: 1024px) {
+    .UserAccount_container__L6nIG {
+        min-height:50vh;
+        padding: 94px 32px 102px
+    }
+}
+
+@media (max-width: 576px) {
+    .UserAccount_container__L6nIG {
+        padding:76px 20px 102px
+    }
+}
+
+.UserAccount_container__L6nIG .UserAccount_accountMenuBox__YrxsY {
+    padding-top: 130px
+}
+
+@media (max-width: 1024px) {
+    .UserAccount_container__L6nIG .UserAccount_accountMenuBox__YrxsY {
+        display:none
+    }
+}
+
+.UserAccount_container__L6nIG .UserAccount_accountContent__wRQ1O {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    width: 100%
+}
+
+@media (max-width: 376px) {
+    .UserAccount_container__L6nIG .UserAccount_accountContent__wRQ1O {
+        min-width:100%
+    }
+}
+
+.Bonuses_bonusContainer__EtxjY {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: flex-start;
+    max-width: 678px;
+    width: 100%
+}
+
+@media (max-width: 1024px) {
+    .Bonuses_bonusContainer__EtxjY {
+        max-width:100%
+    }
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_titleBox__8bTv4 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-start
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_titleBox__8bTv4 .Bonuses_title__T2g-1 {
+    font-size: 40px;
+    font-variation-settings: "wght" 620,"wdth" 130;
+    font-weight: 620;
+    letter-spacing: -.02em;
+    line-height: 1;
+    text-transform: lowercase
+}
+
+@media (max-width: 576px) {
+    .Bonuses_bonusContainer__EtxjY .Bonuses_titleBox__8bTv4 .Bonuses_title__T2g-1 {
+        font-size:26px;
+        line-height: 1
+    }
+}
+
+@media (max-width: 376px) {
+    .Bonuses_bonusContainer__EtxjY .Bonuses_titleBox__8bTv4 .Bonuses_title__T2g-1 {
+        font-size:24px;
+        font-variation-settings: "wght" 640,"wdth" 130;
+        font-weight: 640;
+        letter-spacing: .01em;
+        line-height: 1.08333
+    }
+}
+
+@media (max-width: 376px) and (max-width:576px) {
+    .Bonuses_bonusContainer__EtxjY .Bonuses_titleBox__8bTv4 .Bonuses_title__T2g-1 {
+        font-size:20px;
+        line-height: 1.1
+    }
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_titleBox__8bTv4 .Bonuses_description__2e1PO {
+    color: hsla(0,0%,7%,.7);
+    font-size: 16px;
+    font-variation-settings: "wdth" 120;
+    font-weight: 500;
+    letter-spacing: -.01em;
+    line-height: 1.3125
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_discountBox__xvYzj {
+    align-items: center;
+    align-self: stretch;
+    background-image: url(/static/media/bonusBg.2e9209dfbf2dfec53b3c.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 8px 20px 8px 8px
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_discountBox__xvYzj .Bonuses_innerBox__-pech {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_discountBox__xvYzj .Bonuses_innerBox__-pech .Bonuses_discount__T1tEe {
+    align-items: center;
+    background: hsla(0,0%,100%,.14);
+    border-radius: 12px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    font-variation-settings: "wght" 640,"wdth" 130;
+    font-weight: 640;
+    gap: 24px;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .01em;
+    line-height: 1.08333;
+    padding: 24px 16px
+}
+
+@media (max-width: 576px) {
+    .Bonuses_bonusContainer__EtxjY .Bonuses_discountBox__xvYzj .Bonuses_innerBox__-pech .Bonuses_discount__T1tEe {
+        font-size:20px;
+        line-height: 1.1
+    }
+}
+
+@media (max-width: 376px) {
+    .Bonuses_bonusContainer__EtxjY .Bonuses_discountBox__xvYzj .Bonuses_innerBox__-pech .Bonuses_discount__T1tEe {
+        font-size:20px;
+        font-variation-settings: "wght" 620,"wdth" 130;
+        font-weight: 600;
+        letter-spacing: -.02em;
+        line-height: 1.15
+    }
+}
+
+@media (max-width: 376px) and (max-width:576px) {
+    .Bonuses_bonusContainer__EtxjY .Bonuses_discountBox__xvYzj .Bonuses_innerBox__-pech .Bonuses_discount__T1tEe {
+        font-size:18px;
+        line-height: 1.15
+    }
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_discountBox__xvYzj .Bonuses_innerBox__-pech .Bonuses_discountText__MQpl\+ {
+    color: #fff;
+    font-size: 20px;
+    font-variation-settings: "wght" 620,"wdth" 130;
+    font-weight: 600;
+    letter-spacing: -.02em;
+    line-height: 1.15
+}
+
+@media (max-width: 576px) {
+    .Bonuses_bonusContainer__EtxjY .Bonuses_discountBox__xvYzj .Bonuses_innerBox__-pech .Bonuses_discountText__MQpl\+ {
+        font-size:18px;
+        line-height: 1.15
+    }
+}
+
+@media (max-width: 376px) {
+    .Bonuses_bonusContainer__EtxjY .Bonuses_discountBox__xvYzj .Bonuses_innerBox__-pech .Bonuses_discountText__MQpl\+ {
+        font-size:16px;
+        font-variation-settings: "wdth" 120;
+        font-weight: 500;
+        letter-spacing: -.01em;
+        line-height: 1.3125
+    }
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_friendsBox__rvo61 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_friendsBox__rvo61 .Bonuses_boxTitle__RRNEr {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+    font-variation-settings: "wght" 640,"wdth" 130;
+    font-weight: 640;
+    gap: 12px;
+    justify-content: flex-start;
+    letter-spacing: .01em;
+    line-height: 1.08333;
+    text-transform: lowercase
+}
+
+@media (max-width: 576px) {
+    .Bonuses_bonusContainer__EtxjY .Bonuses_friendsBox__rvo61 .Bonuses_boxTitle__RRNEr {
+        font-size:20px;
+        line-height: 1.1
+    }
+}
+
+@media (max-width: 376px) {
+    .Bonuses_bonusContainer__EtxjY .Bonuses_friendsBox__rvo61 .Bonuses_boxTitle__RRNEr {
+        font-size:20px;
+        font-variation-settings: "wght" 620,"wdth" 130;
+        font-weight: 600;
+        letter-spacing: -.02em;
+        line-height: 1.15
+    }
+}
+
+@media (max-width: 376px) and (max-width:576px) {
+    .Bonuses_bonusContainer__EtxjY .Bonuses_friendsBox__rvo61 .Bonuses_boxTitle__RRNEr {
+        font-size:18px;
+        line-height: 1.15
+    }
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_friendsBox__rvo61 .Bonuses_friendsList__DTPOk {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_friendsBox__rvo61 .Bonuses_friendsList__DTPOk .Bonuses_friendItem__Kw\+sc {
+    align-items: center;
+    border-bottom: 1px solid #dedede;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 0;
+    width: 100%
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_friendsBox__rvo61 .Bonuses_friendsList__DTPOk .Bonuses_friendItem__Kw\+sc:first-child {
+    border-bottom: 1px solid #141824
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_friendsBox__rvo61 .Bonuses_friendsList__DTPOk .Bonuses_friendItem__Kw\+sc:last-child {
+    border-bottom: none
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_friendsBox__rvo61 .Bonuses_friendsList__DTPOk .Bonuses_friendItem__Kw\+sc .Bonuses_tableTitle__K7aDm {
+    color: rgba(20,24,36,.4);
+    font-size: 16px;
+    font-variation-settings: "wght" 620,"wdth" 130;
+    font-weight: 620;
+    letter-spacing: -.02em;
+    line-height: 1.1875
+}
+
+.Bonuses_bonusContainer__EtxjY .Bonuses_friendsBox__rvo61 .Bonuses_friendsList__DTPOk .Bonuses_friendItem__Kw\+sc .Bonuses_friendEmail__Yuh14 {
+    color: #141824;
+    font-size: 16px;
+    font-variation-settings: "wdth" 120;
+    font-weight: 500;
+    letter-spacing: -.01em;
+    line-height: 1.3125
+}
+
+/*# sourceMappingURL=277.96293245.chunk.css.map*/

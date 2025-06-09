@@ -1,0 +1,43 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.trackNums {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 24px;
+  align-self: stretch;
+
+  .title {
+    @include subTitle;
+    text-transform: lowercase;
+    color: $text_primary;
+  }
+
+  .shop {
+    @include flexMain(flex, column, center, flex-start);
+    gap: 8px;
+    align-self: stretch;
+
+    .name {
+      @include textBase;
+      //@include text('Roboto Flex', 16px, 620, 120%, -0.32px, normal);
+      color: $text-secondary_true;
+    }
+
+    .info {
+      @include flexMain(flex, column, center, flex-start);
+      gap: 16px;
+      align-self: stretch;
+    }
+
+    .add {
+      @include flexMain(flex, column, flex-start, flex-start);
+      align-self: stretch;
+
+      .btn {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.stagesContainer {
+  @include flexMain(inline-flex, column, center, center);
+  gap: 12px;
+  align-self: stretch;
+  transition: all $trans-base;
+
+  .visualBox {
+    @include flexMain(flex, row, center, center);
+    align-self: stretch;
+    width: 100%;
+    padding: 0 24px;
+    gap: 4px;
+
+
+    //@media (max-width: 576px) {
+    //  padding: 0;
+    //}
+
+
+    .icon {
+      @include icn;
+      @include square(28px);
+    }
+
+    .activeIcon {
+      @include icn;
+      @include square(28px);
+
+      & path {
+        fill-opacity: 1;
+      }
+    }
+
+    .progressLine {
+      @include flexMain(flex, row, flex-start, flex-start);
+      height: 2px;
+      width: 100%;
+      border-radius: 30px;
+      background-color: $border_primary;
+
+
+      .progressEmptyLine {
+        height: 2px;
+        border-radius: 30px;
+        background: $button_primary;
+      }
+
+      .progressHalfLine {
+        height: 2px;
+        width: 50%;
+        border-radius: 30px;
+        background: $button_primary;
+      }
+
+      .progressFullLine {
+        height: 2px;
+        border-radius: 30px;
+        width: 100%;
+        background: $button_primary;
+      }
+    }
+  }
+
+  .statusBox {
+    @include flexMain(flex, row, space-between, center);
+    width: 100%;
+    @include textBase;
+    color: $text_disabled;
+    transition: all $trans-base;
+
+    @media (max-width: 376px) {
+      align-items: flex-start;
+
+    }
+
+    .orderPlaced {
+      max-width: 210px;
+      width: 100%;
+      transition: all $trans-base;
+
+    }
+
+    .orderPayed {
+      max-width: 123px;
+      width: 100%;
+
+    }
+
+    .orderHanded {
+      max-width: 251px;
+      width: 100%;
+
+    }
+
+    .orderReceived {
+      max-width: 88px;
+      text-align: right;
+      width: 100%;
+
+    }
+
+  }
+
+  .activeStatus {
+    color: $text_primary;
+  }
+}

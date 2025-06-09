@@ -1,0 +1,65 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.dnd {
+  @include flexMain(flex, column, center, flex-start);
+  align-self: stretch;
+  gap: 24px;
+
+  .title {
+    @include flexMain(flex, column, center, flex-start);
+    padding: 20px 0;
+    border-bottom: 1px solid $border_primary_accent;
+    align-self: stretch;
+
+    & span {
+      @include text('Roboto Flex', 24px, 640, 110%, -0.48px, normal);
+      text-transform: lowercase;
+      width: 408px;
+    }
+
+  }
+
+  .dnd-area {
+    @include flexMain(flex, column, center, flex-start);
+    align-self: stretch;
+    gap: 8px;
+
+    .drop-zone {
+      @include flexMain(flex, column, center, center);
+      height: 160px;
+      align-self: stretch;
+      border-radius: 16px;
+      border: 2px dashed $border_secondary;
+      //background: $background_secondary;
+
+      .text {
+        @include text('Roboto Flex', 20px, 500, 140%, -0.4px, normal);
+        color: $text_variant_hover;
+
+        & span {
+          color: $text_primary;
+          text-decoration-line: underline;
+          cursor: pointer;
+        }
+      }
+      &--active {
+        //border-color: $border_primary_accent;
+        background: $background_secondary;
+      }
+
+      & input {
+        display: none;
+      }
+    }
+
+    .caption {
+      @include flexMain(flex, row, space-between, center);
+      align-self: stretch;
+      @include text('Roboto Flex', 14px, 500, 125%, -0.4px, normal);
+      color: $text-secondary_true;
+    }
+  }
+}

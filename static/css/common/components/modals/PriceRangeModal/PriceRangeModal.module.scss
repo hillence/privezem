@@ -1,0 +1,52 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  @include flexMain(flex, column, space-between, flex-start);
+  align-self: stretch;
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.box {
+  @include flexMain(flex, column, flex-start, flex-start);
+  gap: 32px;
+}
+
+.header {
+  @include blockTitle;
+  color: $text_primary;
+  text-transform: lowercase;
+  font-weight: 640;
+
+  @media (max-width: 376px) {
+    font-size: 20px;
+  }
+}
+
+.content {
+  @include flexMain(flex, row, center, center);
+  gap: 12px;
+}
+
+.item {
+  @include flexMain(flex, row, center, center);
+  gap: 8px;
+
+  & span {
+    @include text('Roboto Flex', 16px, 500, 130%, -0.16px, normal);
+    color: $text_disabled;
+  }
+}
+
+.footer {
+  @include flexMain(flex, column, center, center);
+  width: 100%;
+
+  .button {
+    align-self: stretch;
+  }
+}

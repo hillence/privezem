@@ -1,0 +1,82 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  @include flexMain(flex, column, space-between, flex-start);
+  align-self: stretch;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.box {
+  @include flexMain(flex, column, flex-start, flex-start);
+  gap: 32px;
+  align-self: stretch;
+}
+
+.header {
+  @include blockTitle;
+  color: $text_primary;
+  text-transform: lowercase;
+  font-weight: 640;
+
+  @media (max-width: 376px) {
+    font-size: 20px;
+  }
+}
+
+.content {
+  @include flexMain(flex, column, flex-start, flex-start);
+  align-self: stretch;
+  height: 100%;
+  gap: 20px;
+}
+
+.item {
+  @include flexMain(flex, column, flex-start, flex-start);
+  gap: 8px;
+  align-self: stretch;
+
+  .span {
+    @include text('Roboto Flex', 16px, 620, 120%, -0.32px, normal);
+    text-transform: lowercase;
+    color: $text_primary;
+  }
+}
+
+.price {
+  @include flexMain(flex, row, center, center);
+  gap: 12px;
+  max-width: 344px;
+
+  @media (max-width: 376px) {
+    gap: 8px;
+  }
+
+  & span {
+    @include text('Roboto Flex', 16px, 500, 130%, -0.32px, normal);
+    //overflow: hidden;
+    color: $text_secondary_disabled;
+    //text-overflow: ellipsis;
+    //text-transform: lowercase;
+  }
+}
+
+.filterItem {
+  justify-content: space-between;
+  width: 100%;
+  max-width: 344px;
+}
+
+.footer {
+  @include flexMain(flex, row, center, center);
+  align-self: stretch;
+  gap: 12px;
+  //width: 100%;
+}
+.button {
+  width: 100%;
+}

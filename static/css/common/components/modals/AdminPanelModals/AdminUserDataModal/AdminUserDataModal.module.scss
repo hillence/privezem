@@ -1,0 +1,159 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.modalBox {
+  @include flexMain(flex, column, center, flex-start);
+  align-self: stretch;
+
+  .title {
+    @include text('Roboto Flex', 24px, 640, 110%, -0.48px, normal);
+    text-transform: lowercase;
+    padding-bottom: 36px;
+    width: 100%;
+  }
+
+  .contentBox {
+    @extend %rootModalContent;
+    align-self: stretch;
+    padding-bottom: 60px;
+
+    .form {
+      @include flexMain(flex, column, center, flex-start);
+      align-self: stretch;
+      overflow-y: auto;
+      gap: 32px;
+
+      .inputBox {
+        @include flexMain(flex, column, center, flex-end);
+        gap: 16px;
+        align-self: stretch;
+
+        .inputItem {
+          align-self: stretch;
+          position: relative;
+
+          .input {
+            @extend %inputStyles;
+            box-sizing: border-box;
+            outline: none;
+            outline-offset: 2px;
+            width: 100%;
+
+            &:focus {
+              border: 2px solid $border_primary_accent;
+              box-shadow: 0 4px 16px 0 rgba(25, 34, 39, 0.05);
+            }
+          }
+
+          .inputError {
+            border: 2px solid $system_error;
+            box-shadow: 0 2px 12px 0 rgba(239, 49, 36, 0.12);
+
+            &:focus {
+              border: 2px solid $system_error;
+              box-shadow: 0 2px 12px 0 rgba(239, 49, 36, 0.12);
+            }
+          }
+
+          .errorMsg {
+            align-self: flex-start;
+
+            & span {
+              @include text('Roboto Flex', 14px, 500, 125%, -0.4px, normal);
+              color: $system_error;
+            }
+          }
+
+          & img {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        .generatePasswordBtn {
+          & span {
+            @include text('Roboto Flex', 16px, 500, normal, -0.32px, normal);
+            color: #1a1a1a;
+            text-transform: lowercase;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .rangeBox {
+        @include flexMain(flex, column, center, flex-start);
+        gap: 16px;
+
+        .subtitle {
+          @include text('Roboto Flex', 20px, 620, 115%, -0.4px, normal);
+          text-transform: lowercase;
+          color: $text_primary;
+        }
+
+        .priceBox {
+          @include flexMain(flex, row, center, center);
+          align-self: stretch;
+          gap: 8px;
+
+          .divider {
+            width: 16px;
+            height: 4px;
+            background: #d9d9d9;
+          }
+        }
+
+        .error {
+          color: $system_error;
+          display: block;
+          margin-top: 4px;
+          text-transform: lowercase;
+        }
+      }
+
+      .buttonBox {
+        @include flexMain(flex, column, center, flex-start);
+        align-self: stretch;
+        gap: 8px;
+
+        .saveButtonActive {
+          @extend %btnStyles;
+          box-shadow: 0 4px 16px 0 rgba(25, 34, 39, 0.05);
+          background: $background_accent;
+          color: $text_primary_invert;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .saveButtonDisabled {
+          @extend %btnStyles;
+          background: $background_secondary;
+          color: $text_secondary_disabled;
+          border: 0;
+        }
+
+        .deleteUserBtn {
+          @extend %btnStyles;
+          border: 0;
+          background: $background_primary;
+          //transition: all 0.3s ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            border: 1px solid $border_primary;
+            //transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

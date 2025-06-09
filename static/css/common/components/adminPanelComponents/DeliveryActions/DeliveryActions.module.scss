@@ -1,0 +1,89 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.box {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 24px;
+  align-self: stretch;
+
+  .title {
+    @include blockTitle;
+    font-variation-settings: 'wght' 640, 'wdth' 110;
+    text-transform: lowercase;
+
+    @media (max-width: 768px) {
+      font-weight: 640;
+    }
+  }
+
+  .description {
+    @include textBase;
+    font-variation-settings: 'wdth' 130;
+    color: $text_secondary;
+  }
+
+  .container {
+    @include flexMain(flex, column, flex-start, flex-start);
+    gap: 16px;
+    align-self: stretch;
+
+    .inputs {
+      @include flexMain(flex, row, flex-start, flex-start);
+      gap: 16px;
+      align-self: stretch;
+
+      @media (max-width: $media-phone) {
+        flex-direction: column;
+      }
+
+      .inputStyle {
+        width: 100%;
+
+        //@media (max-width: 769px) {
+        //  //width: 259px;
+        //}
+        //
+        //@media (max-width: $media-phone) {
+        //  flex-direction: column;
+        //}
+      }
+    }
+
+    .textarea {
+      @include textPrimary;
+      padding: 16px 16px 0 16px;
+      outline-offset: 2px;
+      resize: none;
+      overflow-y: hidden;
+      width: 100%;
+      transition: all $trans-base;
+      border: 1.5px solid $border_primary;
+      border-radius: 16px;
+
+      &:focus:not(:disabled),
+      &:hover:not(:disabled) {
+        border: 1.5px solid $border_primary_active;
+        outline: none;
+        box-shadow: 0 4px 16px 0 rgba(25, 34, 39, 0.05);
+      }
+      &:disabled {
+        background: $button_primary_disabled;
+        color: $text_secondary_disabled;
+      }
+    }
+
+    .buttonStyle {
+      padding: 0 24px;
+
+      @media (max-width: $media-phone) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: $media-phone) {
+      @include flexMain(flex, column, flex-start, flex-start);
+    }
+  }
+}

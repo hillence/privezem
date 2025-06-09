@@ -1,0 +1,168 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.modalBox {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 16px;
+  align-self: stretch;
+
+  @media (max-width: 376px) {
+    max-height: calc(100vh - 20px);
+  }
+}
+
+.header {
+  @include blockTitle;
+  font-weight: 640;
+}
+
+.content {
+  @extend %rootModalContent;
+}
+
+.addressBox {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 20px;
+  align-self: stretch;
+}
+
+.subTitle {
+  @include subTitle;
+  font-weight: 620;
+
+  @media (max-width: 376px) {
+    font-size: 20px;
+  }
+}
+
+.addressInputs {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 16px;
+  align-self: stretch;
+}
+
+.addressName {
+  width: 100%;
+
+  & textarea {
+    @extend %textareaStyles;
+    @include textPrimary;
+    padding: 16px;
+
+    &:focus,
+    &:hover {
+      border: 1px solid $border_primary_active;
+      outline: none;
+      box-shadow: 0 4px 16px 0 rgba(25, 34, 39, 0.05);
+    }
+  }
+}
+
+.addressInput {
+  width: 404px;
+
+  @media (max-width: 376px) {
+    width: 100%;
+  }
+}
+
+.addressDetails {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 16px;
+  align-self: stretch;
+}
+
+.inputBox {
+  @include flexMain(flex, row, flex-start, flex-start);
+  gap: 16px;
+  align-self: stretch;
+}
+
+.addressNotice {
+  @include textCaption;
+  width: 100%;
+  padding: 6px 16px 6px 16px;
+  color: $text_disabled;
+  border: 1px solid $border_primary;
+  border-radius: 16px;
+  transition: all $trans-base;
+  min-height: 120px;
+
+  &:hover {
+    border: 1px solid $border_primary_active;
+    outline: none;
+    box-shadow: 0 4px 16px 0 rgba(25, 34, 39, 0.05);
+  }
+
+  & textarea {
+    @include textPrimary;
+    outline-offset: 2px;
+    resize: none;
+    overflow-y: hidden;
+    width: 100%;
+    transition: all $trans-base;
+    color: $text_primary;
+    border: none;
+
+    &:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.userDataBox {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 16px;
+  align-self: stretch;
+}
+
+.switchBox {
+  @include flexMain(flex, row, flex-start, center);
+  gap: 12px;
+}
+
+.switch-text {
+  @include textBase;
+  font-size: 20px;
+
+  @media (max-width: 576px) {
+    font-size: 18px;
+  }
+}
+
+.radioButtonsBox {
+  @include flexMain(flex, column, flex-start, flex-start);
+  gap: 20px;
+  align-self: stretch;
+  margin-top: 16px;
+}
+
+.baseTitle {
+  @include textBase;
+  font-weight: 620;
+}
+
+.userPassportDataBox {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 16px;
+  align-self: stretch;
+}
+
+.submitBtn {
+  @include flexMain(flex, column, center, center);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 48px;
+  background: $background_primary;
+  border-top: 1px solid $border_primary;
+
+  @media (max-width: 376px) {
+    padding: 24px 12px;
+  }
+}

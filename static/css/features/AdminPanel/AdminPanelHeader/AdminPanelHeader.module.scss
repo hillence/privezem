@@ -1,0 +1,162 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.headerContainer {
+  @include flexMain(flex, row, space-between, center);
+  position: relative;
+  align-self: stretch;
+  padding: 24px 32px;
+  border-bottom: 1px solid $border_secondary;
+
+  @media (max-width: 768px) {
+    padding: 20px 32px;
+  }
+
+  @media (max-width: 376px) {
+    padding: 16px 20px;
+  }
+
+  .nameBox {
+    display: flex; //delete after dev
+    flex-direction: row; //delete after dev
+    gap: 8px; //delete after dev
+    flex: 1;
+
+    & span {
+      @include subTitle;
+      color: $text_primary;
+      text-transform: lowercase;
+      cursor: pointer;
+      transition: background $trans-base, color 0.2s ease, box-shadow $trans-base,
+        border $trans-base;
+
+      &:hover {
+        color: $text_variant_hover;
+      }
+    }
+
+    @media (max-width: 768px) {
+      font-weight: 620;
+    }
+  }
+
+  .searchBox {
+    @extend %filterItem;
+    flex: 1;
+    gap: 8px;
+    align-self: stretch;
+    max-width: 380px;
+    transition: all 0.3s ease-in-out;
+
+    & input {
+      @include textBase;
+      width: 100%;
+      padding-right: 12px;
+      padding-left: 12px;
+      letter-spacing: unset;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: $radius-small;
+      outline: none !important;
+      transition: border $trans-base, box-shadow $trans-base;
+
+      &::placeholder {
+        color: $text_secondary_disabled;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &:focus-within {
+      border: 1px solid $border_primary_accent;
+      box-shadow: 0 4px 16px 0 rgba(25, 34, 39, 0.05);
+    }
+
+    @media (max-width: 768px) {
+      max-width: 220px;
+    }
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  .actionBox {
+    @include flexMain(flex, row, flex-end, center);
+    flex: 1;
+    gap: 8px;
+
+    .searchMobileButton {
+      display: none;
+      padding: 0;
+    }
+
+    .logoutButton {
+      //gap: 8px;
+      //padding: 8px 20px;
+
+      & svg {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        padding: 0;
+        border: none;
+        width: 36px;
+        height: 36px;
+
+        & svg {
+          display: flex;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .settingsButton,
+      .logoutButton {
+        & span {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: 576px) {
+      .searchMobileButton {
+        display: flex;
+      }
+    }
+  }
+}
+
+.modalContainer {
+  @extend %rootModalContainer;
+  @include flexMain(flex, column, center, center);
+  top: -150%;
+  right: 0;
+  gap: 24px;
+  width: 100%;
+  height: 200px;
+  transition: top 0.3s ease-in-out;
+
+  @media (max-width: 768px) {
+    height: 250px;
+  }
+
+  @media (max-width: 376px) {
+    gap: 20px;
+    align-items: flex-start;
+    align-self: stretch;
+    justify-content: flex-start;
+    height: 100%;
+  }
+}
+
+.activeModalContainer {
+  top: 0;
+  right: 0;
+  transition: top 0.3s ease-in-out;
+}

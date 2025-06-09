@@ -1,0 +1,45 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  @include flexMain(flex, row, center, center);
+  //position: relative;
+  gap: 8px;
+  width: fit-content;
+  padding: 8px 12px;
+  border: 1px solid $border_secondary;
+  border-radius: 8px;
+  //z-index: 21;
+  color: $text_primary;
+  cursor: pointer;
+
+  .color {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  & span {
+    white-space: nowrap;
+  }
+
+  .icon {
+    @include square(20px);
+    @include icn;
+    transform-origin: center center;
+    fill: transparent;
+    transition: all $trans-base;
+
+    &.is-active {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.active {
+  background-color: $background_primary;
+  outline: 1.5px solid $border_primary_accent;
+  //border: 1.5px solid #2b2b2b;
+}

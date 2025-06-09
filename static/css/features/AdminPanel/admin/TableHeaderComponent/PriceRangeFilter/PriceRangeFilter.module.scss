@@ -1,0 +1,20 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.priceFilter {
+  @include flexMain(flex, row, center, center);
+  gap: 12px;
+  width: 340px;
+}
+
+.item {
+  @include flexMain(flex, row, center, center);
+  gap: 8px;
+}
+
+.text {
+  @include text('Roboto Flex', 16px, 500, 130%, -0.16px, normal);
+  color: $text_disabled;
+}

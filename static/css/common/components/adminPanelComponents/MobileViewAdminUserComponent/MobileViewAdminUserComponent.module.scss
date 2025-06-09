@@ -1,0 +1,96 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.userBox {
+  @include flexMain(flex, column, flex-start, flex-start);
+  gap: 12px;
+  max-width: 343px;
+  padding: 16px;
+  border: 1px solid $border_secondary;
+  border-radius: 12px;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    max-width: 100%;
+    width: 48%;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .header {
+    @include flexMain(flex, row, space-between, flex-start);
+    gap: 12px;
+    align-self: stretch;
+
+    .userName {
+      @include textBaseAccent;
+      align-self: stretch;
+      color: $text_primary;
+      font-weight: 620;
+    }
+
+    .action {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .contentBox {
+    @include flexMain(flex, column, flex-start, flex-start);
+    gap: 4px;
+    align-self: stretch;
+
+    .contentItem {
+      @include flexMain(flex, row, flex-start, center);
+      gap: 8px;
+      align-self: stretch;
+      overflow: hidden;
+
+      .itemName {
+        @include textCaption;
+        color: $text_disabled;
+        flex: 1;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        //width: 100px;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+
+        @media (max-width: 376px) {
+          @include textSmall;
+        }
+      }
+
+      .itemValue {
+        @include textCaption;
+        color: $text_primary;
+        flex: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @media (max-width: 376px) {
+          @include textSmall;
+        }
+      }
+    }
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+.noData {
+  @include blockTitle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}

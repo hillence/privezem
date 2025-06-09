@@ -1,0 +1,66 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  @include flexMain(flex, row, space-between, center);
+  height: 88px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 124px;
+  border-radius: 12px;
+  box-shadow: 0 20px 80px 0 rgba(25, 34, 39, 0.2);
+  background-color: $background_object;
+  z-index: 20;
+
+  @media (max-width: 576px) {
+    justify-content: space-around;
+    //padding: 0;
+    padding: 0 20px;
+  }
+
+  .menuItem {
+    @include flexMain(flex, column, center, center);
+    width: 88px;
+    padding: 8px 0;
+    gap: 2px;
+    color: $text_disabled;
+
+    & span {
+      @include textCaption;
+      transition: color $trans-base;
+    }
+  }
+
+  .menuItem--active {
+    @include flexMain(flex, column, center, center);
+    width: 88px;
+    padding: 8px 0;
+    gap: 2px;
+    color: $text_primary;
+
+    & span {
+      color: $text_primary;
+      transition: color $trans-base;
+    }
+  }
+
+  .icon {
+    //@include square(28px);
+    height: 28px;
+  }
+
+  .icon--active {
+    //@include square(28px);
+    height: 28px;
+
+    & path {
+      fill: $text_primary;
+      fill-opacity: 1;
+      transition: all $trans-base;
+    }
+  }
+}

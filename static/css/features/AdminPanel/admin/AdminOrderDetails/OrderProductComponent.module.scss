@@ -1,0 +1,128 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.shoppingList {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 24px;
+  align-self: stretch;
+
+  .shoppingListHeader {
+    @include flexMain(flex, row, space-between, center);
+    gap: 16px;
+    align-self: stretch;
+    padding: 20px 0;
+    border-bottom: 1px solid $border_primary_accent;
+    border-radius: 16px 16px 0 0;
+
+    .logo {
+      @include flexMain(flex, row, center, flex-end);
+      gap: 12px;
+
+      .goodsCount {
+        @include flexMain(flex, column, flex-start, center);
+        width: 20px;
+        height: 28px;
+        padding-bottom: 0;
+      }
+    }
+
+    .totalSum {
+      @include flexMain(flex, row, center, flex-end);
+      @include textPrimary;
+      font-size: 17px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .productList {
+    @include flexMain(flex, column, center, flex-start);
+    gap: 16px;
+    align-self: stretch;
+
+    .productListItems {
+      @include flexMain(flex, column, center, flex-end);
+      align-self: stretch;
+      padding-bottom: 16px;
+      border-bottom: 1px solid $border_secondary;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .itemContent {
+        @include flexMain(flex, row, space-between, center);
+        gap: 16px;
+        align-self: stretch;
+        cursor: pointer;
+
+        @media (max-width: 490px) {
+          align-items: flex-start;
+        }
+
+        .productBox {
+          @include flexMain(flex, row, center, center);
+          gap: 24px;
+          align-self: stretch;
+          width: 100%;
+
+          @media (max-width: 490px) {
+            align-items: flex-start;
+          }
+
+          & img {
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 8px;
+          }
+
+          .itemDescriptionBox {
+            @include flexMain(flex, row, space-between, center);
+            flex: 1 0 0;
+            gap: 4px;
+
+            @media (max-width: 490px) {
+              @include flexMain(flex, column, flex-start, flex-start);
+            }
+
+            .itemTitle {
+              @include flexMain(flex, row, center, center);
+              gap: 8px;
+
+              .itemText {
+                @include textBase;
+                max-width: 250px;
+              }
+            }
+
+            .itemPrice {
+              @include flexMain(flex, row, center, center);
+              @include textBase;
+              gap: 16px;
+            }
+          }
+        }
+
+        .editImg {
+          @include flexMain(flex, column, flex-start, flex-start);
+          top: auto;
+
+          & svg {
+            @include square(24px);
+          }
+          &:hover {
+            cursor: pointer;
+          }
+
+          &.-disabled {
+            color: $text_secondary_disabled;
+            cursor: auto;
+          }
+        }
+      }
+    }
+  }
+}

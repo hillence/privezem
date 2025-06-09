@@ -1,0 +1,44 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.statusFilter {
+  @extend %filterItem;
+  gap: 12px;
+  height: 44px;
+  //width: 126px;
+
+  .statusTitleBox {
+    @include flexMain(flex, row, center, center);
+    gap: 8px;
+
+    & svg {
+      @include square(20px)
+    }
+
+    .title {
+      @include text('Roboto Flex', 16px, 500, 130%, -0.32px, normal);
+      color: $text_primary;
+      text-transform: lowercase;
+    }
+  }
+
+  .icon {
+    @include square(16px);
+    @include icn;
+    transform-origin: center center;
+    fill: transparent;
+    transition: all $trans-base;
+
+    &.is-active {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.activeStatusFilter {
+  gap: 12px;
+  box-sizing: border-box;
+  border: 1.5px solid $border_primary_active;
+}

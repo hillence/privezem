@@ -1,0 +1,35 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.orderTabBox {
+  @include flexMain(flex, row, center, flex-start);
+  gap: 24px;
+
+  .tabItem {
+    @extend %orderTabStyles;
+    color: $text_disabled;
+    font-weight: 620;
+
+
+    @media (max-width: 376px) {
+      @include blockTitle;
+      font-weight: 620;
+      font-size: 26px !important;
+    }
+
+  }
+
+  .active {
+    @extend %orderTabStyles;
+    color: $text_primary;
+    font-weight: 620;
+
+    @media (max-width: 376px) {
+      @include blockTitle;
+      font-weight: 620;
+      font-size: 26px !important;
+    }
+  }
+}

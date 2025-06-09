@@ -1,0 +1,16 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.containerMax {
+  height: 140px;
+}
+
+.containerMin {
+  height: 100px;
+}
+
+.item {
+  width: 306px;
+}

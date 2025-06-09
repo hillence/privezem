@@ -1,0 +1,28 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.avatarBox {
+  @include flexMain(flex, row, flex-start, center);
+  gap: 12px;
+
+  .avatar {
+    //@include textBaseAccent;
+    text-transform: uppercase;
+    color: $text_primary_invert;
+  }
+
+  .nameBox {
+    @include flexMain(flex, column, flex-start, flex-start);
+
+    .name {
+      @include textBase;
+      color: $text_primary;
+    }
+    .description {
+      @include textCaption;
+      color: $text_disabled;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.noteBox {
+  @include flexMain(flex, column, flex-start, flex-start);
+  align-self: stretch;
+  gap: 12px;
+  max-width: 448px;
+  padding-bottom: 12px;
+
+  .note {
+    @include flexMain(flex, column, flex-start, flex-start);
+    @include textBase;
+    color: $text_primary;
+    text-align: left;
+    padding: 16px;
+    border-radius: 12px;
+    background: $background_neutral;
+  }
+}

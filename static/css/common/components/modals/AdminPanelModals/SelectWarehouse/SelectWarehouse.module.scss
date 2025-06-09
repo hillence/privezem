@@ -1,0 +1,112 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 32px;
+  align-self: stretch;
+}
+
+.title {
+  @include blockTitle;
+}
+
+.content {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 20px;
+  align-self: stretch;
+  position: relative;
+}
+
+.label {
+  @include subTitle;
+}
+
+.selectBox {
+  @include flexMain(flex, row, space-between, center);
+  gap: 8px;
+  align-self: stretch;
+  padding: 0 16px;
+  border-radius: 16px;
+  border: 2px solid $border_primary;
+  height: 64px;
+  cursor: pointer;
+}
+.address {
+  @include textPrimary;
+  text-transform: lowercase;
+}
+
+.icon {
+  @include square(24px);
+  @include icn;
+  transform-origin: center center;
+  fill: transparent;
+  transition: all $trans-base;
+
+  &.is-active {
+    transform: rotate(180deg);
+  }
+}
+
+.menu {
+  @include flexMain(flex, column, center, flex-start);
+  align-self: stretch;
+  position: absolute;
+  transform: translateY(100%);
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  bottom: 0;
+  border-radius: 16px;
+  background: $background_primary;
+  border: 1px solid $border_primary;
+  box-shadow: 0 5px 24px 0 rgba(25, 34, 39, 0.1);
+  transition: all $trans-base;
+  box-sizing: border-box;
+  z-index: 100;
+  visibility: hidden;
+
+  &.is-active {
+    max-height: 500px;
+    visibility: visible;
+  }
+}
+
+.item {
+  @include flexMain(flex, column, center, flex-start);
+  align-self: stretch;
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 48px;
+  width: 100%;
+  transition: background-color $trans-base;
+  cursor: pointer;
+
+  @include text('Roboto Flex', 20px, 500, 120%, -0.4px, normal);
+  text-transform: lowercase;
+
+  &:hover {
+    background: $background_primary_hover;
+  }
+}
+
+.submit {
+  @include flexMain(flex, column, center, center);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 48px;
+  background: $background_primary;
+  border-top: 1px solid $border_primary;
+
+  @media (max-width: 376px) {
+    padding: 24px 12px;
+  }
+}
+.btn {
+  width: 100%;
+}

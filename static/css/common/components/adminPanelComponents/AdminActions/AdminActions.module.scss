@@ -1,0 +1,23 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.payButton {
+  height: 44px;
+}
+
+.returnOrderButton {
+  gap: 8px;
+  height: 44px;
+  white-space: nowrap;
+
+  @media (max-width: $media-phone) {
+    width: 100%;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}

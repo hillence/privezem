@@ -1,0 +1,29 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+
+.tabItem {
+  @include flexMain(flex, row, flex-start, flex-start);
+  gap: 12px;
+
+  .tabTitle {
+    @include pageTitle;
+    text-transform: lowercase;
+    white-space: nowrap;
+    color: $text_disabled;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--active {
+      @include pageTitle;
+      white-space: nowrap;
+      color: $text_primary;
+      transition: color 0.2s ease-in-out;
+    }
+  }
+}

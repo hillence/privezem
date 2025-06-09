@@ -1,0 +1,59 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/modalStyles';
+@import 'src/assets/styles/sass/commonStyles';
+
+.overlay {
+  @extend %modal-overlay;
+  &--active {
+    @extend %modal-overlay--active;
+  }
+}
+
+.container-center {
+  background: $background_primary;
+  box-shadow: 0 5px 24px 0 rgba($shadows_primary, 0.1);
+  //z-index: $z-toast;
+  position: fixed;
+  transform: scale(0) translate(-50%, -50%);
+  transition: transform $trans-base;
+  border-radius: $radius-blocks;
+
+  &--active {
+    pointer-events: all;
+    top: 50%;
+    left: 50%;
+    transform: scale(1) translate(-50%, -50%);
+    transition: transform $trans-base;
+    z-index: $z-toast + 1;
+  }
+}
+.closeBox {
+  @extend %closeBox;
+
+  @media (max-width: 576px) {
+    right: 8px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      @include square(24px);
+    }
+  }
+
+  @media (max-height: 376px) {
+    right: 8px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      @include square(24px);
+    }
+  }
+
+  &--active {
+    @extend %closeBox--active;
+  }
+}

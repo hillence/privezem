@@ -1,0 +1,16 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.actionsBox {
+  @include flexMain(flex, column, center, flex-start);
+  align-self: stretch;
+  gap: 40px;
+
+  .buttons {
+    @include flexMain(flex, row, flex-end, flex-start);
+    gap: 16px;
+    align-self: stretch;
+  }
+}

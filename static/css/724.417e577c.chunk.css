@@ -1,0 +1,93 @@
+.UserAccount_container__L6nIG {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    min-height: 65vh;
+    padding: 130px 32px 96px;
+    transition: all .3s ease-out;
+    width: 100%
+}
+
+@media (max-width: 1024px) {
+    .UserAccount_container__L6nIG {
+        min-height:50vh;
+        padding: 94px 32px 102px
+    }
+}
+
+@media (max-width: 576px) {
+    .UserAccount_container__L6nIG {
+        padding:76px 20px 102px
+    }
+}
+
+.UserAccount_container__L6nIG .UserAccount_accountMenuBox__YrxsY {
+    padding-top: 130px
+}
+
+@media (max-width: 1024px) {
+    .UserAccount_container__L6nIG .UserAccount_accountMenuBox__YrxsY {
+        display:none
+    }
+}
+
+.UserAccount_container__L6nIG .UserAccount_accountContent__wRQ1O {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    width: 100%
+}
+
+@media (max-width: 376px) {
+    .UserAccount_container__L6nIG .UserAccount_accountContent__wRQ1O {
+        min-width:100%
+    }
+}
+
+.OrderHistory_box__uAKLn {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: auto;
+    justify-content: flex-start;
+    max-width: 678px;
+    width: 100%
+}
+
+@media (max-width: 1024px) {
+    .OrderHistory_box__uAKLn {
+        max-width:100%
+    }
+}
+
+@media (max-width: 376px) {
+    .OrderHistory_box__uAKLn {
+        gap:32px
+    }
+}
+
+.OrderHistory_box__uAKLn .OrderHistory_contentBox__ASOO6 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%
+}
+
+.OrderHistory_box__uAKLn .OrderHistory_contentBox__ASOO6 .OrderHistory_ordersList__7Jc8D {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+/*# sourceMappingURL=724.417e577c.chunk.css.map*/

@@ -1,0 +1,120 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.clipBoardBox {
+  @include flexMain(flex, column, flex-start, flex-start);
+  gap: 8px;
+  align-self: stretch;
+
+  .linkBox {
+    @include flexMain(flex, row, space-between, center);
+    gap: 4px;
+    height: 64px;
+    align-self: stretch;
+    border-radius: 16px;
+    outline: 1.5px solid $border_primary;
+    background: $background_object;
+    position: relative;
+    transition: all $trans-base;
+
+    @media (max-width: 576px) {
+      height: 56px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      outline: 1.5px solid $border_primary_accent;
+      box-shadow: 0 4px 16px 0 rgba(25, 34, 39, 0.05);
+      transition: all $trans-base;
+
+      .copyButton {
+        .iconBox {
+          background: $button_primary;
+          transition: all $trans-base;
+
+          .icon {
+            & path {
+              fill: $text_primary_invert;
+            }
+          }
+        }
+      }
+    }
+
+    & span {
+      @include textPrimary;
+      color: $text_disabled;
+      padding-left: 16px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+
+      @media (max-width: 576px) {
+        font-size: 17px;
+      }
+    }
+
+    .copyButton {
+      @include flexMain(flex, column, center, flex-start);
+      padding: 4px;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 12px;
+      background: $background_object;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .iconBox {
+        @include flexMain(flex, column, center, center);
+        align-self: stretch;
+        border-radius: 12px;
+        width: 56px;
+        height: 56px;
+        padding: 12px 20px;
+        background: $button_primary_disabled;
+        transition: all $trans-base;
+
+        @media (max-width: 576px) {
+          height: 48px;
+          width: 48px;
+        }
+      }
+    }
+
+    .tooltip {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .deliveryName {
+    @include flexMain(flex, row, center, center);
+    gap: 8px;
+    padding: 8px 0;
+
+    & span {
+      @include textPrimary;
+      color: $text_disabled;
+    }
+
+    .name {
+      @include flexMain(flex, column, center, flex-start);
+      @include textPrimary;
+      color: $text_primary;
+      text-decoration: underline;
+      cursor: pointer;
+      position: relative;
+
+      .deliveryTooltip {
+        top: -14px;
+        left: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/typography';
+@import 'src/assets/styles/sass/commonStyles';
+
+.box {
+  @include flexMain(flex, column, center, flex-start);
+
+  gap: 16px;
+  align-self: stretch;
+}
+
+.title {
+  @include blockTitle;
+}
+
+.content {
+  @extend %rootModalContent;
+}
+
+.form {
+  @include flexMain(flex, column, center, flex-start);
+  gap: 16px;
+}
+
+.container {
+  @include flexMain(flex, row, center, flex-start);
+  gap: 16px;
+  align-self: stretch;
+}
+
+//.checkbox {
+//  @include flexMain(flex, row, center, center);
+//  gap: 12px;
+//
+//  .label {
+//    &:before {
+//      top: 3px;
+//    }
+//  }
+//}
+
+.switch {
+  @include flexMain(flex, row, center, center);
+  gap: 12px;
+
+  & span {
+    @include textPrimary;
+  }
+}
+
+.btnBox {
+  @include flexMain(flex, column, flex-end, center);
+  gap: 16px;
+  align-self: stretch;
+  margin-top: 32px;
+}
+
+.deleteBtn {
+  color: $system_error;
+}

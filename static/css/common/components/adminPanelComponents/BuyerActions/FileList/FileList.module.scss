@@ -1,0 +1,81 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.files {
+  @include flexMain(flex, column, center, flex-start);
+  align-self: stretch;
+  gap: 12px;
+
+  .block {
+    @include flexMain(flex, column, center, flex-start);
+    align-self: stretch;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 16px;
+    background: $background_secondary;
+    height: 56px;
+
+    .item {
+      @include flexMain(flex, row, space-between, center);
+      align-self: stretch;
+      padding: 10px;
+
+      .description {
+        @include flexMain(flex, row, center, center);
+        gap: 12px;
+        overflow: hidden;
+        cursor: pointer;
+
+        & span {
+          @include text('Roboto Flex', 16px, 620, 120%, -0.32px, normal);
+          color: $text_primary;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+
+      .delete {
+        &:hover {
+          cursor: pointer;
+        }
+
+        & svg {
+          @include square(36px);
+        }
+      }
+    }
+
+    .progressBar {
+      @include flexMain(flex, row, center, center);
+      align-self: stretch;
+
+      .progressBarFill {
+        position: absolute;
+        background-color: $text_tertiary;
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transition: width $trans-base;
+      }
+
+      .title {
+        @include text('Roboto Flex', 16px, 620, 120%, -0.32px, normal);
+        mix-blend-mode: difference;
+      }
+
+      .delete {
+        position: absolute;
+        right: 10px;
+
+        & svg {
+          @include square(36px);
+        }
+      }
+    }
+  }
+}

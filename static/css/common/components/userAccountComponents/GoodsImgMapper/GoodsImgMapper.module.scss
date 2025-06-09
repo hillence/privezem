@@ -1,0 +1,36 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.list {
+  @include flexMain(flex, row, flex-start, center);
+  gap: 8px;
+  padding-top: 16px;
+}
+
+.itemImg {
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+
+  @media (max-width: 376px) {
+    width: 44px;
+    height: 44px;
+  }
+
+  & img {
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+
+    @media (max-width: 376px) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+}

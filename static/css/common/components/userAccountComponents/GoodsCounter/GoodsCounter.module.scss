@@ -1,0 +1,21 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.countBox {
+  @include flexMain(flex, row, center, center);
+  min-width: 60px;
+  height: 40px;
+  padding: 11px 10px 9px 10px;
+
+  & span {
+    @include textBaseAccent;
+    color: $text_disabled;
+    padding: 11px 10px 9px;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid $border_primary;
+  }
+}

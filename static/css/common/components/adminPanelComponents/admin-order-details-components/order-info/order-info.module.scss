@@ -1,0 +1,77 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.orderInfoItem {
+  @include flexMain(flex, row, flex-start, flex-start);
+  gap: 20px;
+  padding: 8px 0;
+
+  @media (max-width: $media-phone) {
+    @include flexMain(flex, column, flex-start, flex-start);
+  }
+}
+
+.itemTitle {
+  @include flexMain(flex, row, flex-start, center);
+  flex-shrink: 0;
+  gap: 4px;
+  width: 210px;
+  color: $text_secondary_disabled;
+
+  .titleIcon {
+    @include square(24px);
+  }
+
+  & span {
+    @include textBase;
+    text-transform: lowercase;
+  }
+}
+
+.itemDescription {
+  @include flexMain(flex, column, flex-start, flex-start);
+  gap: 12px;
+  //width: 448px;
+  width: 100%;
+  max-width: 448px;
+
+  & span {
+    @include textBase;
+  }
+}
+
+.statuses {
+  @include flexMain(flex, row, flex-start, center);
+  gap: 12px;
+  flex-wrap: wrap;
+
+  .callNeeded {
+    @include textBase;
+    text-transform: lowercase;
+    border: 1px solid $border_secondary;
+    border-radius: 8px;
+    padding: 8px 12px 8px 12px;
+  }
+}
+
+.contactItem {
+  @include flexMain(flex, row, flex-start, center);
+  gap: 4px;
+  padding: 4px 12px 4px 8px;
+  background-color: $background_neutral;
+  border-radius: 8px;
+
+  max-width: 300px;
+
+  .icon {
+    @include square(20px);
+  }
+
+  & span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

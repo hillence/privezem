@@ -1,0 +1,72 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.inPaymentBtn {
+  white-space: nowrap;
+  width: 140px;
+
+  @media (max-width: $media-phone) {
+    width: 100%;
+  }
+}
+.confirmBtn {
+  white-space: nowrap;
+  width: fit-content;
+
+  @media (max-width: $media-phone) {
+    width: 100%;
+  }
+}
+
+.editOrderBtn {
+  gap: 8px;
+  width: auto;
+  color: $text_primary;
+  background: $background_primary;
+  border: 1px solid $border_primary;
+
+  &:hover {
+    background: $background_light;
+  }
+
+  &:active:not(:disabled) {
+    background: $button_tertiary_hover;
+  }
+
+  &:disabled {
+    background: $button_primary_disabled;
+  }
+
+  @media (max-width: $media-phone) {
+    width: 100%;
+  }
+}
+
+.cancelOrderBtn {
+  gap: 8px;
+  width: auto;
+  color: $system_error;
+  background: $background_primary;
+  border: 1px solid $border_primary;
+
+  &:hover {
+    background: $background_primary;
+  }
+  &:active:not(:disabled) {
+    background: $system_error_bg;
+  }
+
+  &:disabled {
+    background: $button_primary_disabled;
+  }
+
+  @media (max-width: $media-phone) {
+    width: 100%;
+  }
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}

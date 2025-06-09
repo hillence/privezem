@@ -1,0 +1,54 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.modalBox {
+  @include flexMain(flex, column, space-between, flex-start);
+  align-self: stretch;
+  height: 100%;
+  padding-top: 10px;
+
+  .modalUpBox {
+    .modalHeader {
+      .title {
+        @include blockTitle;
+        color: $text_primary;
+        text-transform: lowercase;
+        font-weight: 640;
+
+        @media (max-width: 376px) {
+          font-size: 20px;
+        }
+      }
+    }
+    .modalBody {
+      @include flexMain(flex, row, center, center);
+      gap: 8px;
+      padding-top: 32px;
+
+      .dataPickerContainer {
+        @include flexMain(flex, row, center, center);
+        gap: 8px;
+
+        .text {
+          @include text('Roboto Flex', 16px, 500, 130%, -0.32px, normal);
+          color: $text_secondary_disabled;
+        }
+      }
+
+      .popper {
+        inset: 20px auto auto -50px !important;
+      }
+    }
+  }
+
+  .modalFooter {
+    @include flexMain(flex, column, center, center);
+    width: 100%;
+
+    .button {
+      align-self: stretch;
+    }
+  }
+}

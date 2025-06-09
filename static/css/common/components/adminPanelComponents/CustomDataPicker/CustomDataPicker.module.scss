@@ -1,0 +1,55 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  @include flexMain(flex, row, center, center);
+  gap: 8px;
+  box-sizing: border-box;
+  padding: 12px;
+  outline: 1.5px solid $border_primary;
+  border-radius: 12px;
+  height: 44px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    outline: 1.5px solid $border_primary_accent;
+  }
+}
+
+.active {
+  outline: 1.5px solid $border_primary_accent;
+}
+
+.dataPicker {
+  @extend %filterItem;
+  @include textSecondary;
+  text-transform: lowercase;
+  color: $text_primary;
+  width: 100%;
+}
+
+.calendar {
+  @include flexMain(flex, column, space-between, flex-start);
+  padding: 20px 24px 24px 24px;
+  align-self: stretch;
+  border-radius: 16px !important;
+  background: var(--background-primary, #fff);
+  box-shadow: 0 5px 24px 0 rgba(25, 34, 39, 0.1);
+  border: none !important;
+}
+.wrapper {
+}
+
+.popper {
+  inset: 20px auto auto 0 !important;
+  @media (max-width: 376px) {
+    //margin-left: -20px;
+  }
+}
+
+.activeDay {
+  color: $text_primary !important;
+}

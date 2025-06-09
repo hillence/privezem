@@ -1,0 +1,52 @@
+@import 'src/assets/styles/sass/variables';
+
+@import 'src/assets/styles/sass/mixins';
+
+
+.container {
+  @include flexMain(flex, column, flex-end, center);
+  position: relative;
+  width: 320px;
+  background: $background_primary;
+  border-radius: 12px;
+  box-shadow: 0 5px 24px 0 rgba(25, 34, 39, 0.10);
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .formItemBox {
+    @include flexMain(flex, column, center, flex-start);
+    z-index: 21;
+    gap: 4px;
+    position: absolute;
+    top: 8px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    &.is-reset {
+      padding-bottom: 44px;
+    }
+  }
+
+  .button {
+    @include flexMain(flex, row, center, center);
+    position: fixed;
+    width: 320px;
+    background: $background_primary;
+    z-index: 22;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 0 0 12px 12px;
+
+    & span {
+      @include text('Roboto Flex', 16px, 500, 130%, -0.16px, normal);
+      text-align: center;
+    }
+  }
+}

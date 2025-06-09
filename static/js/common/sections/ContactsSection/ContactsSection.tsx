@@ -50,7 +50,7 @@ const ContactsSection = () => {
           </div>
 
           <div className={styles.footer}>
-            <div className={styles.footerCopy}>&copy; {currentYear} Oh!Really</div>
+            <div className={styles.footerCopy}>&copy; {currentYear} Привезём</div>
 
             <div className={styles.footerMenu}>
               <ul className={styles.menu}>
@@ -97,7 +97,7 @@ const ContactsSection = () => {
                 rel="nofollow noreferrer noopener"
                 className={styles.cedro}
               >
-                <span className={styles.cedroText}>by Егор Гофман</span>
+                <span className={styles.cedroText}></span>
                 <CedroIcn className={styles.cedroIcn} />
               </a>
             </div>

@@ -1,0 +1,97 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.modalBox {
+  @include flexMain(flex, column, center, flex-start);
+  align-self: stretch;
+  gap: 32px;
+
+  //@media (max-width: 376px) {
+  //  padding: 24px 36px;
+  //}
+
+  .modalHeader {
+    @include flexMain(flex, column, center, flex-start);
+    gap: 16px;
+
+    .title {
+      @include blockTitle;
+      font-weight: 640;
+      color: $text_primary;
+      text-transform: lowercase;
+    }
+
+    .text {
+      @include textBase;
+      color: $text_secondary;
+    }
+  }
+
+  .content {
+    @include flexMain(flex, column, flex-start, flex-start);
+    align-self: stretch;
+    gap: 32px;
+
+    .box {
+      @include flexMain(flex, column, flex-start, flex-start);
+      align-self: stretch;
+      gap: 16px;
+
+      .name {
+        @include textPrimary;
+        color: $text_primary;
+        font-weight: 640;
+      }
+
+      .textareaBox {
+        @include textCaption;
+        width: 100%;
+        padding: 6px 16px 6px 16px;
+        color: $text_disabled;
+        border: 1px solid $border_primary;
+        border-radius: 16px;
+        transition: all $trans-base;
+        min-height: 120px;
+
+        &:hover {
+          border: 1px solid $border_primary_active;
+          outline: none;
+          box-shadow: 0 4px 16px 0 rgba(25, 34, 39, 0.05);
+        }
+
+        & textarea {
+          @include textPrimary;
+          outline-offset: 2px;
+          resize: none;
+          overflow-y: hidden;
+          width: 100%;
+          transition: all $trans-base;
+          color: $text_primary;
+          border: none;
+
+          &:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  .modalFooter {
+    @include flexMain(flex, column, center, center);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 48px;
+    border-top: 1px solid $border_primary;
+
+    @media (max-width: 376px) {
+      padding: 24px 12px;
+    }
+  }
+}

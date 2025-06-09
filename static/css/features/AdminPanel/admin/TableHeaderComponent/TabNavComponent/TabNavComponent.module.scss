@@ -1,0 +1,35 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.tabContainer {
+  @include flexMain(flex, column, flex-start, flex-start);
+  flex: 3;
+  gap: 24px;
+  align-self: stretch;
+  //padding-top: 32px;
+
+  &.tabManagerContainer {
+    flex-direction: row;
+  }
+
+  .tabBox {
+    @include flexMain(flex, row, flex-start, flex-start);
+    gap: 24px;
+
+    @media (max-width: 1380px) {
+      scrollbar-width: none; /* Для Firefox */
+      overflow: hidden;
+      overflow-x: auto;
+      max-width: 90vw;
+      width: 100%;
+      -ms-overflow-style: none; /* Для IE и Edge */
+
+      &::-webkit-scrollbar {
+        width: 0; /* Для Chrome, Safari и Opera */
+        height: 0;
+      }
+    }
+  }
+}

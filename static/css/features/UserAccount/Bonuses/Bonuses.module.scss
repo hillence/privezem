@@ -1,0 +1,138 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.bonusContainer {
+  @include flexMain(flex, column, flex-start, flex-start);
+  gap: 40px;
+  align-self: stretch;
+  max-width: 678px;
+  width: 100%;
+
+  @media (max-width: $media-tablet-user-account) {
+    max-width: 100%;
+  }
+
+  .titleBox {
+    @include flexMain(flex, column, flex-start, flex-start);
+    gap: 24px;
+    align-self: stretch;
+
+    .title {
+      @include pageTitle;
+      text-transform: lowercase;
+
+      @media (max-width: 376px) {
+        @include blockTitle;
+      }
+    }
+
+    .description {
+      @include textBase;
+      color: $text_secondary;
+    }
+
+  }
+
+  .discountBox {
+    @include flexMain(flex, column, flex-start, center);
+    //gap: 12px;
+    align-self: stretch;
+    box-sizing: border-box;
+    padding: 8px 20px 8px 8px;
+    border-radius: 16px;
+    background-image: url('../../../assets/icons/bonusBg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .innerBox {
+      @include flexMain(flex, row, space-between, center);
+      width: 100%;
+
+
+      .discount {
+        @include flexMain(flex, column, center, center);
+        @include blockTitle;
+        color: $text_primary_invert;
+        padding: 24px 16px;
+        height: 48px;
+        gap: 24px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.14);
+
+        @media (max-width: 376px) {
+          @include subTitle;
+          //padding: 16px 8px;
+          //height: 40px;
+          //gap: 16px;
+        }
+      }
+
+      .discountText {
+        @include subTitle;
+        color: $text_primary_invert;
+
+        @media (max-width: 376px) {
+          @include textBase;
+        }
+      }
+    }
+
+
+  }
+
+  .friendsBox {
+    @include flexMain(flex, column, center, flex-start);
+    gap: 24px;
+    align-self: stretch;
+
+    .boxTitle {
+      @include flexMain(flex, row, flex-start, flex-start);
+      gap: 12px;
+      @include blockTitle;
+      text-transform: lowercase;
+
+      @media (max-width: 376px) {
+        @include subTitle;
+      }
+
+    }
+
+    .friendsList {
+      @include flexMain(flex, column, center, flex-start);
+      align-self: stretch;
+
+      .friendItem {
+        @include flexMain(flex, row, space-between, center);
+        width: 100%;
+        padding: 16px 0;
+        border-bottom: 1px solid $border_primary;
+
+        &:first-child {
+          border-bottom: 1px solid $border_primary_accent;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .tableTitle {
+          @include textBaseAccent;
+          color: $text_disabled;
+        }
+
+
+        .friendEmail {
+          @include textBase;
+          color: $text_primary;
+        }
+
+        .friendStatus {
+        }
+      }
+    }
+  }
+
+}

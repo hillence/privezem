@@ -1,0 +1,74 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.statusItem {
+  @include flexMain(flex, row, space-between, center);
+  position: relative;
+  align-self: stretch;
+  box-sizing: border-box;
+  padding: 8px 8px;
+
+
+  .statusTitle {
+    @include flexMain(flex, row, flex-start, center);
+    gap: 10px;
+    white-space: nowrap;
+
+    .statusColor {
+      width: 12px;
+      height: 12px;
+      border-radius: 30px;
+    }
+
+    & input[type='radio'] {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    & label {
+      @include textBase;
+      color: $text_primary;
+      text-transform: lowercase;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .iconBox {
+    @include flexMain(flex, row, center, center);
+    width: 24px;
+    height: 24px;
+
+    & img {
+      width: 12.5px;
+      height: 8.5px;
+    }
+  }
+
+  &:hover::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    background: rgba(20, 24, 36, 0.04);
+    border-radius: 12px;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  box-sizing: border-box;
+  background: $background_primary_hover;
+  border-radius: 12px;
+}

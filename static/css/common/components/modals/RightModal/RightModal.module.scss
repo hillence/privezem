@@ -1,0 +1,156 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+@import 'assets/styles/sass/modalStyles';
+
+.overlay {
+  @extend %modal-overlay;
+  &--active {
+    @extend %modal-overlay--active;
+  }
+}
+
+.container-right {
+  @include flexMain(flex, column, flex-start, flex-start);
+  background: #ffffff;
+  box-shadow: 0 5px 24px 0 rgba(25, 34, 39, 0.1);
+  z-index: $z-toast;
+  position: fixed;
+  flex-shrink: 0;
+
+  gap: 16px;
+  width: 500px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  padding: 24px 48px;
+  transition: transform $trans-base;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    padding: 24px 16px;
+  }
+
+  &--active {
+    pointer-events: all;
+    transform: translateX(0);
+    transition: transform $trans-base;
+  }
+}
+.closeBox {
+  @extend %closeBox;
+
+  &--active {
+    @extend %closeBox--active;
+  }
+}
+
+.modalContainer {
+  //background: #ffffff;
+  //box-shadow: 0 5px 24px 0 rgba(25, 34, 39, 0.1);
+  //z-index: $z-toast;
+  //position: fixed;
+  //flex-shrink: 0;
+  ////transition: all $trans-base;
+  //align-self: stretch;
+  //overflow: auto;
+  //scrollbar-width: none; /* Для Firefox */
+  ////max-width: 90vw;
+  //-ms-overflow-style: none; /* Для IE и Edge */
+  //
+  //opacity: 0;
+  //transform: translateX(100%);
+  //transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  //width: 0;
+  //opacity: 0;
+  //visibility: hidden;
+  //transition: opacity $trans-base, visibility $trans-base;
+  //pointer-events: none;
+
+  //transform: translateX(100%);
+  //transition: transform $trans-base;
+  //
+  //&::-webkit-scrollbar {
+  //  width: 0; /* Для Chrome, Safari и Opera */
+  //  height: 0;
+  //}
+  //
+  //&-right {
+  //  //transform: translateX(100%); // Изменено здесь
+  //  //
+  //  //transition: transform $trans-base;
+  //
+  //  &--active {
+  //    @include flexMain(flex, column, flex-start, flex-start);
+  //    gap: 16px;
+  //    width: 500px;
+  //    height: 100%;
+  //    top: 0;
+  //    right: 0;
+  //    padding: 24px 48px;
+  //    pointer-events: all;
+  //    transform: translateX(0); // Оставлено без изменений
+  //    transition: transform $trans-base;
+  //    visibility: visible;
+  //    opacity: 1;
+  //
+  //    @media (max-width: 500px) {
+  //      width: 100%;
+  //      padding: 24px 16px;
+  //    }
+  //  }
+  //}
+
+  //&-top {
+  //  //top: -150%;
+  //  //transform: translateY(-100%);
+  //  //transition: transform $trans-base;
+  //  //right: 0;
+  //  //width: 100%;
+  //
+  //  &--active {
+  //    @include flexMain(flex, column, center, center);
+  //    //top: 0;
+  //    //transition: all 0.3s ease-in-out;
+  //    right: 0;
+  //    width: 100%;
+  //    transform: translateY(0);
+  //    transition: transform $trans-base;
+  //    opacity: 1;
+  //    @media (max-width: 576px) {
+  //      gap: 20px;
+  //      align-items: flex-start;
+  //      align-self: stretch;
+  //      justify-content: flex-start;
+  //      height: 100%;
+  //    }
+  //  }
+  //}
+
+  &-center {
+    display: none;
+    //transform: scale(0);
+    //@media (max-width: 376px) {
+    //}
+
+    &--active {
+      display: flex;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 16px;
+      //transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  //.closeBox {
+  //  @extend %closeBox;
+  //
+  //  &--active {
+  //    @extend %closeBox--active;
+  //  }
+  //}
+}

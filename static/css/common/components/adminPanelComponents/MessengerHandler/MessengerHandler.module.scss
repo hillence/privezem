@@ -1,0 +1,35 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+%messengerBox {
+  @include flexMain(flex, row, center, center);
+  padding: 4px 8px 4px 4px;
+  border-radius: 8px;
+  gap: 8px;
+
+  & span {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+.telegramBox {
+  @extend %messengerBox;
+  background: linear-gradient(203deg, rgba(55, 174, 226, 0.05) 0%, rgba(30, 150, 200, 0.05) 100%);
+
+  & span {
+    background-image: linear-gradient(to right, rgba(55, 174, 226, 1), rgba(30, 150, 200, 1));
+  }
+}
+
+.whatsappBox {
+  @extend %messengerBox;
+  background: linear-gradient(203deg, rgba(37, 211, 102, 0.05) 0%, rgba(37, 211, 102, 0.05) 100%);
+
+  & span {
+    background-image: linear-gradient(to right, rgba(32, 176, 56, 1), rgba(96, 214, 106, 1));
+  }
+}

@@ -1,0 +1,36 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+@import 'src/assets/styles/sass/filterCheckBoxCommonStyles';
+
+.container {
+  height: 134px;
+}
+
+.item {
+  @extend %item;
+  width: 304px;
+
+  &.selected {
+    background: $background_primary_active;
+  }
+}
+
+.title {
+  @include flexMain(flex, row, flex-start, center);
+  align-self: stretch;
+  gap: 4px;
+}
+
+.name {
+  @include text('Roboto Flex', 16px, 500, 130%, -0.16px, normal);
+  color: $text_primary;
+  text-transform: lowercase;
+}
+
+.count {
+  @include text('Roboto Flex', 16px, 500, 130%, -0.16px, normal);
+  color: $text_variant_hover;
+  text-transform: lowercase;
+}

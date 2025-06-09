@@ -1,0 +1,116 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.modalBox {
+  @include flexMain(flex, column, center, flex-start);
+
+  gap: 16px;
+  align-self: stretch;
+
+  .header {
+    @include blockTitle;
+  }
+
+  .content {
+    @extend %rootModalContent;
+  }
+
+  .submitBtn {
+    width: 100%;
+
+    .actionBlock {
+      @include flexMain(flex, column, center, center);
+      gap: 16px;
+    }
+  }
+}
+
+.orderingBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.orderingBox {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-gap: 32px;
+  padding-top: 32px;
+  @include textBase();
+  border-top: 1px solid $border_primary_accent;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 126px 1fr;
+  }
+
+  @media (max-width: 376px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formSubtitle {
+  @include textPrimary();
+  padding-right: 20px;
+}
+
+.deliveryTabs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.orderingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dadataSuggestions {
+  margin: 0 12px;
+}
+
+.inputBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.formSwitch {
+  @include textFs-20-to17;
+  display: flex;
+  gap: 12px;
+}
+
+.messaging {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.messagingSubtitle {
+  @include textCaption();
+}
+
+.radioBox {
+  display: flex;
+  gap: 20px;
+}
+
+.passport {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.passportText {
+  @include textCaption();
+}

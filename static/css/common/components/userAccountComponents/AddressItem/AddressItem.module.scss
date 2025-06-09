@@ -1,0 +1,100 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+@import 'assets/styles/sass/userAccStyles';
+
+.block {
+  @extend %componentBlock;
+}
+
+.main {
+  @include flexMain(flex, row, space-between, flex-start);
+  gap: 8px;
+}
+
+.address {
+  @include flexMain(flex, column, flex-start, flex-start);
+  gap: 4px;
+
+  p {
+    @include textSecondary;
+    color: $text_secondary;
+  }
+}
+
+.title {
+  @include flexMain(flex, row, flex-start, flex-start);
+  gap: 12px;
+  @include subTitle;
+
+  & svg {
+    opacity: 0;
+    @include square(24px);
+    @include icn;
+    transition: opacity $trans-base;
+    cursor: pointer;
+
+    @media (max-width: 396px) {
+      display: none;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @media (max-width: 396px) {
+    display: block;
+  }
+}
+
+.badge,
+.mobileBadge {
+  @extend %componentBadge;
+}
+
+.badge {
+  @media (max-width: 396px) {
+    display: none;
+  }
+}
+
+.mobileActions {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  color: $text_disabled;
+
+  @media (max-width: 396px) {
+    display: flex;
+  }
+
+  .edit {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .editIcon {
+      opacity: 1;
+      fill: $text_disabled;
+    }
+  }
+
+  .mobileBadge {
+    display: none;
+    @media (max-width: 396px) {
+      display: flex;
+    }
+  }
+}
+
+//.editIcon {
+//  opacity: 0;
+//  @include square(24px);
+//  @include icn;
+//  transition: opacity $trans-base;
+//  cursor: pointer;
+//}

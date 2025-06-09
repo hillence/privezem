@@ -1,0 +1,99 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.mobileOrderList {
+  display: none;
+
+  @media (max-width: 576px) {
+    @include flexMain(flex, column, center, flex-start);
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .orderItem {
+    @include flexMain(flex, column, center, flex-start);
+    gap: 12px;
+    align-self: stretch;
+    width: 100%;
+    padding: 16px;
+    border: 1px solid $border_secondary;
+    border-radius: 12px;
+
+    .orderHeader {
+      @include flexMain(flex, column, flex-start, flex-start);
+      gap: 12px;
+
+      .titleBox {
+        @include flexMain(flex, column, flex-start, flex-start);
+
+        gap: 8px;
+        align-self: stretch;
+
+        .title {
+          @include textBaseAccent;
+          width: 100%;
+          color: $text_primary;
+          text-transform: lowercase;
+        }
+
+        .price {
+          @include textBase;
+          color: $text_primary;
+          text-transform: lowercase;
+        }
+      }
+
+      .orderStatus {
+        position: relative;
+
+        .statusBox {
+          position: absolute;
+          z-index: 11;
+          top: 44px;
+        }
+      }
+    }
+
+    .orderContacts {
+      @include flexMain(flex, row, flex-start, flex-start);
+      flex-wrap: wrap;
+      gap: 4px;
+      align-content: flex-start;
+      align-self: stretch;
+
+      .contactItem {
+        @include flexMain(flex, row, flex-start, flex-start);
+        gap: 10px;
+        padding: 4px 8px;
+        background: $background_neutral;
+        border-radius: 8px;
+        overflow: hidden;
+
+        & span {
+          @include textCaption;
+          color: $text_secondary;
+          text-align: right;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    @extend %overlay;
+    z-index: 10;
+  }
+
+  .notFoundBox {
+    @include blockTitle;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+}

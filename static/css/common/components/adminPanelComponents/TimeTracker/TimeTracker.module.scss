@@ -1,0 +1,38 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.box {
+  @include flexMain(flex, row, space-between, center);
+  align-self: stretch;
+  padding: 24px 32px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 5px 24px 0 rgba(25, 34, 39, 0.1);
+
+  @media (max-width: 576px) {
+    @include flexMain(flex, column, center, center);
+    gap: 16px;
+  }
+
+  .info {
+    @include flexMain(flex, row, center, center);
+    gap: 8px;
+    color: $text_primary;
+
+    .title {
+      @include text('Roboto Flex', 16px, 620, 120%, -0.32px, normal);
+    }
+
+    .time {
+      @include text('Roboto Flex', 20px, 500, 140%, -0.4px, normal);
+    }
+  }
+
+  .action {
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+  }
+}

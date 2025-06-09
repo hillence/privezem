@@ -1,0 +1,103 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.container {
+  position: relative;
+}
+
+.box {
+  @include flexMain(flex, row, space-between, center);
+  width: auto;
+  height: 64px;
+  gap: 16px;
+  border-radius: 16px;
+  border: 1.5px solid $border_primary;
+  padding: 0 16px;
+  transition: all 0.3s ease-in-out;
+  align-self: stretch;
+  cursor: pointer;
+  &:hover {
+    border-color: $border_primary_accent;
+  }
+}
+
+.label {
+  @include text('Roboto Flex', 20px, 500, 120%, -0.4px, normal);
+  color: $text_primary;
+  text-transform: lowercase;
+}
+
+.icon {
+  @include square(24px);
+  @include icn;
+  transform-origin: center center;
+  fill: transparent;
+  transition: all $trans-base;
+
+  &.is-active {
+    transform: rotate(180deg);
+  }
+}
+
+.dropdown {
+  @include flexMain(flex, column, center, flex-start);
+  align-self: stretch;
+  gap: 4px;
+  position: absolute;
+  transform: translateY(100%);
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  bottom: 0;
+  padding: 8px;
+  border-radius: 16px;
+  background: $background_primary;
+  border: 1px solid $border_primary;
+  box-shadow: 0 5px 24px 0 rgba(25, 34, 39, 0.1);
+  transition: all $trans-base;
+  box-sizing: border-box;
+  z-index: $z-toast;
+  visibility: hidden;
+
+  &.is-active {
+    max-height: 1000px;
+    bottom: -12px;
+    visibility: visible;
+  }
+}
+
+.action {
+  @include flexMain(flex, row, space-between, center);
+  width: 100%;
+  height: 56px;
+  padding: 8px 12px 8px 16px;
+  cursor: pointer;
+  transition: all $trans-base;
+  border-radius: 12px;
+  visibility: hidden;
+
+  &:hover {
+    background: $background_primary_hover;
+  }
+  &.is-active {
+    visibility: visible;
+  }
+}
+
+.title {
+  @include text('Roboto Flex', 20px, 620, 130%, -0.2px, normal);
+  color: $text_primary;
+  text-transform: lowercase;
+}
+
+.iconBox {
+  @include flexMain(flex, row, flex-start, center);
+  @include square(24px);
+}
+
+.addIcon {
+  @include icn;
+  @include square(16px);
+}

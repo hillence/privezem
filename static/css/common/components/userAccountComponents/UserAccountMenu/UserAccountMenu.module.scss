@@ -1,0 +1,46 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.menuContainer {
+  @include flexMain(inline-flex, column, flex-start, flex-start);
+  position: relative;
+  gap: 12px;
+  width: 218px;
+
+  .menuItem {
+    @include flexMain(flex, row, center, center);
+    @include blockTitle;
+    margin-left: 0;
+    padding-left: 0;
+    color: $text_disabled;
+    transition: all 0.3s ease;
+    font-weight: 640;
+    white-space: nowrap;
+
+    &--active {
+      @include blockTitle;
+      padding-left: 12px;
+      color: $text_primary;
+      cursor: pointer;
+      font-weight: 640;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      @include blockTitle;
+      cursor: pointer;
+      padding-left: 12px;
+      color: $text_primary;
+      font-weight: 640;
+    }
+  }
+
+  .line {
+    @include flexMain(flex, column, center, center);
+    position: absolute;
+    transition: transform 0.3s ease;
+    left: -8px;
+  }
+}

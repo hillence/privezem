@@ -1,0 +1,30 @@
+@import 'src/assets/styles/sass/variables';
+@import 'src/assets/styles/sass/mixins';
+@import 'src/assets/styles/sass/commonStyles';
+@import 'src/assets/styles/sass/typography';
+
+.dataPicker {
+  @include flexMain(flex, row, center, center);
+  gap: 12px;
+
+  @media (max-width: 376px) {
+    gap: 8px;
+  }
+
+  .item {
+    @include flexMain(flex, row, center, center);
+    gap: 8px;
+
+    .span {
+      @include text('Roboto Flex', 16px, 500, 130%, -0.32px, normal);
+      overflow: hidden;
+      color: $text_secondary_disabled;
+      text-overflow: ellipsis;
+      text-transform: lowercase;
+    }
+  }
+
+  .popper {
+    inset: 20px auto auto -40px !important;
+  }
+}

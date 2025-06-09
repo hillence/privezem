@@ -1,0 +1,21 @@
+@import 'src/assets/styles/sass/userAccStyles';
+
+.block {
+  @extend %rootBlock;
+}
+
+.pageTitle {
+  @include pageTitle;
+}
+
+.contentBox {
+  @extend %contentBox;
+}
+
+.button {
+  @extend %addButton;
+}
+
+.icon {
+  @extend %addIcon;
+}
