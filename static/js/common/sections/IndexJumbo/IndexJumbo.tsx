@@ -78,7 +78,7 @@ const IndexJumbo = () => {
         <div className={width.base}>
           <div className={styles.wrapper}>
             <h1 className={`${styles.title} ${hasBg ? styles['title--invert'] : ''}`}>
-              Доставка товаров <br />
+              Заказывайте товары <br />
               {/* eslint-disable-next-line no-irregular-whitespace */}
               в Россию
             </h1>
